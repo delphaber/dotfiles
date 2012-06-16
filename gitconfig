@@ -1,0 +1,70 @@
+[alias]
+  # shortcuts
+  ci = commit
+  co = checkout
+  addp = add -p .
+  shoe = show
+
+  # infos
+  fame = shortlog -s --
+  st = status
+  ch = diff --name-status -r
+  df = diff
+  last = log -1 HEAD
+
+  # undo
+  unadd = reset HEAD --
+  unstage = reset HEAD --
+  unch = checkout --
+  unci = reset --soft
+  rmun = clean -f
+
+  # recommit
+  reco = commit --amend
+
+  # tags
+  tags = tag
+
+  # fix merge conficts
+  resolved = add
+
+  # branches
+  branches = branch -v
+  br = checkout
+  newbr = checkout -b
+  rmbr = branch -d
+  trackbr = git checkout --track
+  menoff = merge --no-ff
+
+  # assume-unchanged
+  as = update-index --assume-unchanged
+  nas = update-index --no-assume-unchanged
+
+  # log
+  l = log --oneline --decorate --graph -60
+  time = log --oneline --decorate --graph --branches --remotes -20
+
+  # list aliases
+  al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+[user]
+	name = Ju Liu
+	email = ju.liu@welaika.com
