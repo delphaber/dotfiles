@@ -9,6 +9,7 @@ DOTFILES = %w(
   gemrc
   gitconfig
   inputrc
+  irbrc
   rvmrc
 )
 
