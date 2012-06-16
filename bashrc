@@ -28,8 +28,8 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
-export PATH="/Users/arkham/bin:/usr/local/share/python:/usr/local/bin:$PATH"
-export WORKON_HOME="/Users/arkham/.envs"
+export PATH="$HOME/bin:/usr/local/share/python:/usr/local/bin:$HOME/.rvm/bin:$PATH"
+export WORKON_HOME="$HOME/.envs"
 
 ## Colored manpages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -73,6 +73,3 @@ function 3box {
 function transtun {
   ssh -p 8532 3box.delphaber.com -L 9091:192.168.1.2:9091
 }
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

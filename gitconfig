@@ -65,6 +65,7 @@
   added = green
   changed = yellow
   untracked = red
+
 [user]
-	name = Ju Liu
-	email = ju.liu@welaika.com
+  name = Ju Liu
+  email = ju.liu@welaika.com
