@@ -1,7 +1,2 @@
-#------------------------
-#
-# $HOME/.bash_profile
-#
-#------------------------
-
+# just load .bashrc
 source $HOME/.bashrc
