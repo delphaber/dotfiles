@@ -3,7 +3,6 @@
   ci = commit
   co = checkout
   addp = add -p .
-  shoe = show
 
   # infos
   fame = shortlog -s --
@@ -67,5 +66,5 @@
   untracked = red
 
 [user]
-  name = Ju Liu
-  email = ju.liu@welaika.com
+  name = Fabrizio Monti
+  email = fabrizio.monti@welaika.com

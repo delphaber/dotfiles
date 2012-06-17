@@ -1,14 +1,18 @@
-Arkham's dotfiles configuration
+Delphaber's dotfiles configuration
 ===============================
 
-My dotfiles, with some sweet rake love.
+Thanks to:
+
+* [Arkham](https://github.com/Arkham)
+
+I've changed only few lines :)
 
 ## Installation:
 
 Prerequisites: ruby.
 
 1. Clone this repo into ".dotfiles":  
-   `git clone https://github.com/Arkham/dotfiles ~/.dotfiles`
+   `git clone https://github.com/delphaber/dotfiles ~/.dotfiles`
 2. Go into ".dotfiles" and run "rake":  
    `cd ~/.dotfiles && rake`
 
@@ -29,8 +33,8 @@ directory and will install in your home symlinks to the dotfiles in the
   - bash history size is increased to 10'000 lines
   - commands starting with space and duplicate commands are removed from bashrc
   - man pages are colored
-  - homebrew bash-completion compatible
-  - rvm and virtualenv compatible
+  - bash-completion compatible
+  - rvm compatible
 * gemrc prevents installation from being installed
 * gitconfig contains some useful aliases
 * inputrc allows some fun tricks:
