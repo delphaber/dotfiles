@@ -68,9 +68,9 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ## Virtualenv wrapper
-source /usr/local/share/python/virtualenvwrapper.sh
 has_virtualenv() {
   if [ -e .venv ]; then
+    source /usr/local/share/python/virtualenvwrapper.sh
     workon `cat .venv`
   fi
 }
