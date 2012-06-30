@@ -1,0 +1,3 @@
+[submodule "bundle/bashmarks"]
+	path = bundle/bashmarks
+	url = git@github.com:delphaber/bashmarks.git

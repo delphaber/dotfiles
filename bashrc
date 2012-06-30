@@ -67,6 +67,10 @@ LESS_TERMCAP_us=$'\E[01;32m'
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+## Bashmarks
+
+source "./bundle/bashmarks/bashmarks.sh"
+
 ## Path
 PATH="$PATH:$HOME/.rvm/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
