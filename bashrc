@@ -21,7 +21,7 @@ PS1="${GREEN}\u${NC} ${BLUE}\W${NC}${YELLOW}\$(__git_ps1) \$${NC} "
 
 ## Aliases
 alias recent="ls -lAt | head"
-alias ls="ls -hFG --color=auto"
+alias ls="ls -hF --color=auto"
 alias la="ls -lA --color=auto"
 alias rm="rm -i"
 alias mv="mv -i"
