@@ -17,7 +17,7 @@ white='\[\e[0;37m\]'
 WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
-PS1="${green}\u${NC} ${BLUE}\w${NC}${GREEN}\$(__git_ps1) \$${NC} "
+PS1="\n${BLACK}[\A] ${green}\u${NC} ${BLUE}\w [\$(~/.rvm/bin/rvm-prompt)]${GREEN}\$(__git_ps1)\n${BLACK}↳ ${GREEN}\$ ${NC}"
 
 ## Aliases
 alias ls="ls -hFG"
@@ -48,7 +48,9 @@ export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
 export PATH="$HOME/bin:/usr/local/share/python:/usr/local/bin:$HOME/.rvm/bin:$PATH"
-export WORKON_HOME="$HOME/.envs"
+export WORKON_HOME="$HOME/.virtualenvs"
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
 
 ## Colored manpages
 export LESS_TERMCAP_mb=$'\E[01;31m'
