@@ -17,7 +17,12 @@ white='\[\e[0;37m\]'
 WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
-PS1="\n${BLACK}[\A] ${green}\u${NC} ${BLUE}\w [\$(~/.rvm/bin/rvm-prompt)]${GREEN}\$(__git_ps1)\n${BLACK}↳ ${GREEN}\$ ${NC}"
+PROMPT_INFO="${BLACK}[\A] ${green}\u${NC} ${BLUE}\w"
+PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
+PROMPT_GIT="${GREEN}\$(__git_ps1)"
+PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
+
+PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 alias ls="ls -hFG"
