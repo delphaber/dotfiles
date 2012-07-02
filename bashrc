@@ -68,7 +68,7 @@ LESS_TERMCAP_us=$'\E[01;32m'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ## Path
-PATH="$PATH:$HOME/.rvm/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
+PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
 ## Custom functions
 function trebox_outside() {
