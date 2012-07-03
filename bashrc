@@ -17,7 +17,12 @@ white='\[\e[0;37m\]'
 WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
-PS1="${GREEN}\u${NC} ${BLUE}\W${NC}${YELLOW}\$(__git_ps1) \$${NC} "
+PROMPT_INFO="${BLACK}[\A] ${GREEN}\u${NC} ${BLUE}\w"
+PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
+PROMPT_GIT="${YELLOW}\$(__git_ps1)"
+PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
+
+PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 alias recent="ls -lAt | head"
