@@ -17,11 +17,16 @@ white='\[\e[0;37m\]'
 WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
-PS1="${GREEN}\u${NC} ${BLUE}\W${NC}${YELLOW}\$(__git_ps1) \$${NC} "
+PROMPT_INFO="${BLACK}[\A] ${GREEN}\u${NC} ${BLUE}\w"
+PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
+PROMPT_GIT="${YELLOW}\$(__git_ps1)"
+PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
+
+PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 alias recent="ls -lAt | head"
-alias ls="ls -hFG --color=auto"
+alias ls="ls -hF --color=auto"
 alias la="ls -lA --color=auto"
 alias rm="rm -i"
 alias mv="mv -i"
@@ -68,10 +73,10 @@ LESS_TERMCAP_us=$'\E[01;32m'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ## Bashmarks
-. "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
+source "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
 
 ## Path
-PATH="$PATH:$HOME/.rvm/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
+PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
 ## Custom functions
 function trebox_outside() {
