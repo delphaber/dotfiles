@@ -12,6 +12,7 @@ DOTFILES = %w(
   irbrc
   pryrc
   rvmrc
+  screenrc
 )
 
 desc %(Make symlinks of dotfiles)
