@@ -74,7 +74,7 @@ LESS_TERMCAP_us=$'\E[01;32m'
 
 ## Bashmarks
 
-source "./bundle/bashmarks/bashmarks.sh"
+source "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
 
 ## Path
 PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
