@@ -10,7 +10,6 @@ DOTFILES = %w(
   gitconfig
   inputrc
   irbrc
-  pryrc
   rvmrc
 )
 
