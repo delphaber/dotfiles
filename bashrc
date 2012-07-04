@@ -22,7 +22,7 @@ PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
 PROMPT_GIT="${GREEN}\$(__git_ps1)"
 PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
 
-PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
+PS1="\n${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 alias ls="ls -hFG"
@@ -52,7 +52,7 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
-export PATH="$HOME/bin:/usr/local/share/python:/usr/local/bin:$HOME/.rvm/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.rvm/bin:/usr/local/sbin/:/usr/local/bin:/usr/local/share/python:$PATH"
 export WORKON_HOME="$HOME/.virtualenvs"
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
