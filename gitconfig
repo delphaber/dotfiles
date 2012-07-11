@@ -68,3 +68,9 @@
 [user]
   name = Fabrizio Monti
   email = fabrizio.monti@welaika.com
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 700x550+181+84
+	file-view-vpane-position = 221
+	history-view-vpane-position = 73
+	main-window-view = FileView
