@@ -1,4 +1,4 @@
-task :default => [:backup_dir, :backup, :link]
+task :default => [:backup_dir, :backup, :link, :init_submodules]
 
 DOTFILES_DIR = ".dotfiles"
 BACKUP_DIR = "backup"
@@ -12,6 +12,10 @@ DOTFILES = %w(
   irbrc
   rvmrc
 )
+
+task :init_submodules do
+  sh "git submodule update --init"
+end
 
 desc %(Make symlinks of dotfiles)
 task :link do
