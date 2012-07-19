@@ -1,0 +1,32 @@
+" disable beep
+set noerrorbells
+set novisualbell
+
+" use MacVim
+set editor='bash -lc \"mvim -f \\$*\" mvim'
+
+" leader!
+let mapleader=","
+
+" tab navigation
+nmap <S-Right> gt
+nmap <S-Left> gT
+
+" switch between latest tabs
+nmap <Leader><Leader> <C-^>
+
+" faster moving
+nnoremap j 5j
+nnoremap k 5k
+
+" some smart search configuration
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+map <silent> <leader>h :set hlsearch!<CR>
+
+" show the available tabs
+noremap <leader>t :buffers<CR>
+
+" vim: ft=vim
