@@ -3,7 +3,7 @@ set noerrorbells
 set novisualbell
 
 " use MacVim
-set editor='bash -lc \"mvim -f \\$*\" mvim'
+set editor='bash -lc "mvim -f \$*" mvim '
 
 " leader!
 let mapleader=","
@@ -24,7 +24,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-map <silent> <leader>h :set hlsearch!<CR>
+nnoremap <Esc> :nohl<CR>
 
 " show the available tabs
 noremap <leader>t :buffers<CR>
