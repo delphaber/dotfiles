@@ -87,15 +87,24 @@ venv_cd () {
 alias cd="venv_cd"
 
 ## 3box
-function 3box {
-  ip=$(ifconfig | grep -A3 '^en1' | tail -1 | cut -d' ' -f2)
+function 3box_address {
+  ip=$(ifconfig en1 | grep -o "inet [0-9.]\+" | cut -d' ' -f2)
   if [[ $ip == "192.168.1.101" ]]; then
-    ssh -p 8532 192.168.1.2
+    echo "192.168.1.2"
   else
-    ssh -p 8532 3box.delphaber.com
+    echo "3box.delphaber.com"
   fi
 }
 
-function transtun {
-  ssh -p 8532 3box.delphaber.com -L 9091:192.168.1.2:9091
+function 3box {
+  ssh -p 8532 `3box_address`
 }
+function brick {
+  sshfs -p 8532 "`3box_address`:/media/BRICK" ~/Desktop/brick
+}
+function transtun {
+  ssh -p 8532 `3box_address` -L 9091:192.168.1.2:9091
+}
+
+## Some random fortune
+fortune -s
