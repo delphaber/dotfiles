@@ -49,6 +49,7 @@ alias chgrp='chgrp --preserve-root'
 
 # Cosiness
 alias ..='cd ..'
+alias ,,='cd -'
 alias wget='wget -c'
 alias recent='ls -lAt | head'
 alias ports='netstat -tulanp'
