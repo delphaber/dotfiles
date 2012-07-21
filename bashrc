@@ -46,6 +46,7 @@ shopt -s cmdhist        # Save multi-line commands in history as single line.
 shopt -s dotglob        # Include dotfile in path-name expansions.
 shopt -s histappend     # Append to history rather than overwrite.
 shopt -s nocaseglob     # Pathname expansion will be treated as case-insensitive.
+stty -ixon              # Disable console start/stop: makes ^S and ^Q go through
 
 ## Exports
 export HISTSIZE=10000
