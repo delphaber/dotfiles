@@ -25,15 +25,38 @@ PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
 PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
-alias recent="ls -lAt | head"
-alias ls="ls -hF --color=auto"
-alias la="ls -lA --color=auto"
-alias rm="rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
-alias grep="grep --color=auto"
-alias df="df -h"
-alias du="du -hs"
+# Appereance
+alias ls='ls -hF --color=auto'
+alias la='ls -lA --color=auto'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias diff='colordiff'
+
+# Common options
+alias mkdir='mkdir -pv'
+alias df='df -h'
+alias du='du -hs'
+
+# Security
+alias rm='rm -i --preserve-root'
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+
+# Cosiness
+alias ..='cd ..'
+alias wget='wget -c'
+alias recent='ls -lAt | head'
+alias ports='netstat -tulanp'
+alias apt-get='sudo apt-get'
+alias apache-error='tailf /var/log/apache2/error.log'
+alias apache-log='tailf /var/log/apache2/access.log'
+alias apache-restart='sudo service apache2 restart'
+alias mysql-restart='sudo service mysql restart'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -89,4 +112,12 @@ function trebox_inside() {
 
 function transbox() {
     ssh -p 8532 -L 9091:127.0.0.1:9091 3box.delphaber.com;
+}
+
+function update() {
+if uname -a | grep -q '\bUbuntu\b'
+  then sudo apt-get update && sudo apt-get upgrade
+elif uname -a | grep -q '\bARCH\b'
+  then yaourt -Syu --aur
+fi
 }
