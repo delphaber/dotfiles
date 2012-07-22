@@ -2,6 +2,9 @@
 set noerrorbells
 set novisualbell
 
+" arrange statusline order
+set status=location,input,bookmark,history,tabcount,position
+
 " use MacVim
 set editor='bash -lc "mvim -f \$*" mvim '
 
@@ -27,6 +30,6 @@ set smartcase
 nnoremap <Esc> :nohl<CR>
 
 " show the available tabs
-noremap <leader>t :buffers<CR>
+noremap <leader>b :buffers<CR>
 
 " vim: ft=vim
