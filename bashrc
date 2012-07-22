@@ -32,6 +32,9 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 alias grep="grep --color=auto"
+alias apache_start="sudo apachectl -k start"
+alias apache_stop="sudo apachectl -k graceful-stop"
+alias apache_restart="sudo apachectl -k graceful"
 alias red="redpomo"
 
 ## Todo
