@@ -29,6 +29,9 @@ set ignorecase
 set smartcase
 nnoremap <Esc> :nohl<CR>
 
+" Alt is broken in normal mode
+nnoremap ò @
+
 " show the available tabs
 noremap <leader>b :buffers<CR>
 
