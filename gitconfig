@@ -41,6 +41,7 @@
 
   # log
   l = log --oneline --decorate --graph -60
+  la = log --oneline --decorate --graph -60 --name-only
   time = log --oneline --decorate --graph --branches --remotes -20
 
   # list aliases
