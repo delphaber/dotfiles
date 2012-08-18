@@ -103,16 +103,24 @@ source "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
 PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
 ## Custom functions
-function trebox_outside() {
-    ssh -p 8532 3box.delphaber.com;
+
+function trebox-hostname() {
+  if [[ `iwgetid --raw` == 'allippiti' ]]
+    then echo "192.168.1.2"
+    else echo "3box.delphaber.com"
+  fi
 }
 
-function trebox_inside() {
-    ssh -p 8532 192.168.1.2;
+function ssh-3box() {
+  ssh -p 8532 `trebox-hostname`;
 }
 
-function transbox() {
-    ssh -p 8532 -L 9091:127.0.0.1:9091 3box.delphaber.com;
+function transmission-3box() {
+  ssh -p 8532 -L 9091:127.0.0.1:9091 `trebox-hostname`;
+}
+
+function sshfs-3box() {
+  sshfs -p 8532 `trebox-hostname`:/ /media/3box/
 }
 
 function update() {
