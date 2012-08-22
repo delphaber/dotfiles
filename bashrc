@@ -25,6 +25,10 @@ PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
 PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
+
+# https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
+alias sudo='sudo '
+
 # Appereance
 alias ls='ls -hF --color=auto'
 alias la='ls -lA --color=auto'
