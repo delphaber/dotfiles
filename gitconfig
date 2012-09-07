@@ -2,6 +2,8 @@
   # shortcuts
   ci = commit
   co = checkout
+  di = diff
+  dc = diff --cached
   addp = add -p .
   shoe = show
 

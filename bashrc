@@ -32,6 +32,7 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 alias grep="grep --color=auto"
+alias sudo="sudo "
 alias apache_start="sudo apachectl -k start"
 alias apache_stop="sudo apachectl -k graceful-stop"
 alias apache_restart="sudo apachectl -k graceful"
@@ -92,8 +93,8 @@ alias cd="venv_cd"
 
 ## 3box
 function 3box_address {
-  ip=$(ifconfig en1 | grep -o "inet [0-9.]\+" | cut -d' ' -f2)
-  if [[ $ip == "192.168.1.101" ]]; then
+  ssid=$(airport -I | grep -Po "(?<=\bSSID: ).*")
+  if [[ $ssid == "allippiti" ]]; then
     echo "192.168.1.2"
   else
     echo "3box.delphaber.com"
