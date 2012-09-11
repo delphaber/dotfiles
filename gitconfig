@@ -42,7 +42,7 @@
   # log
   l = log --oneline --decorate --graph -60
   la = log --oneline --decorate --graph -60 --name-only
-  time = log --oneline --decorate --graph --branches --remotes -20
+  time = log --oneline --decorate --graph --branches --remotes -40
 
   # list aliases
   al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
@@ -70,8 +70,8 @@
   name = Fabrizio Monti
   email = fabrizio.monti@welaika.com
 [giggle]
-	main-window-maximized = true
-	main-window-geometry = 1280x751+0+25
-	file-view-vpane-position = 422
-	history-view-vpane-position = 274
+	main-window-maximized = false
+	main-window-geometry = 614x312+378+177
+	file-view-vpane-position = 272
+	history-view-vpane-position = 37
 	main-window-view = HistoryView
