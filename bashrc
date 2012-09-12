@@ -84,8 +84,12 @@ HISTCONTROL="ignoreboth"
 EDITOR="/usr/bin/vim"
 
 ## Bash completion
+# UBUNTU
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
+# ARCHLINUX
+elif [ -f /usr/share/bash-completion ] && ! shopt -oq posix; then
+    . /usr/share/bash-completion
 fi
 
 ## Colored manpages
