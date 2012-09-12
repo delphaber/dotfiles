@@ -138,3 +138,6 @@ elif uname -a | grep -q '\bARCH\b'
   then yaourt -Syu --aur
 fi
 }
+
+#Fix gvim global menu on UBUNTU
+function gvim () { (/usr/bin/gvim -f "$@" &) }
