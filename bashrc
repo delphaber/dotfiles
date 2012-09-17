@@ -82,8 +82,13 @@ fi
 ## Virtualenv wrapper
 has_virtualenv() {
   if [ -e .venv ]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
-    workon `cat .venv`
+    venv=$(cat .venv)
+    if [[ $(type -t workon) != "function" ]]; then
+      source /usr/local/share/python/virtualenvwrapper.sh
+    fi
+    if [[ $(basename "$VIRTUAL_ENV") != $venv ]]; then
+      workon $venv
+    fi
   fi
 }
 venv_cd () {
