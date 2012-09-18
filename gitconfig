@@ -2,6 +2,8 @@
   # shortcuts
   ci = commit
   co = checkout
+  di = diff
+  dc = diff --cached
   addp = add -p .
 
   # infos
@@ -40,9 +42,9 @@
   nas = update-index --no-assume-unchanged
 
   # log
-  l = log --oneline --decorate --graph -60
-  la = log --oneline --decorate --graph -60 --name-only
-  time = log --oneline --decorate --graph --branches --remotes -40
+  l = log --oneline --decorate --graph -20
+  t = log --oneline --decorate --graph --branches --remotes -20
+  lg = log --oneline --decorate --graph --branches --remotes -20 --pretty=format:'%C(yellow)%h%C(red bold)%d %Creset%s %C(green)(%ar) %C(cyan)<%cn>' --date=relative
 
   # list aliases
   al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
@@ -69,9 +71,10 @@
 [user]
   name = Fabrizio Monti
   email = fabrizio.monti@welaika.com
+
 [giggle]
-	main-window-maximized = false
+	main-window-maximized = true
 	main-window-geometry = 614x312+378+177
-	file-view-vpane-position = 272
-	history-view-vpane-position = 37
+	file-view-vpane-position = 989
+	history-view-vpane-position = 754
 	main-window-view = HistoryView
