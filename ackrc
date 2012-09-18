@@ -5,3 +5,4 @@
 --type-set=yaml=.yml
 --type-set=erb=.erb
 --type-set=coffee=.coffee
+--type-set=log=.log
