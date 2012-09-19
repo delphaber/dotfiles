@@ -109,9 +109,7 @@ function 3box_address {
 function 3box {
   ssh -p 8532 `3box_address`
 }
-function brick {
-  sshfs -p 8532 "`3box_address`:/media/BRICK" ~/Desktop/brick
-}
+
 function transtun {
   ssh -p 8532 `3box_address` -L 9091:192.168.1.2:9091
 }
