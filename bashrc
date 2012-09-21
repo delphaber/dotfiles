@@ -38,7 +38,7 @@ alias fgrep='fgrep --color=auto'
 alias diff='colordiff'
 
 # Common options
-alias mkdir='mkdir -pv'
+alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hs'
 
