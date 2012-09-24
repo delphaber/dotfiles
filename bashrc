@@ -38,7 +38,7 @@ alias fgrep='fgrep --color=auto'
 alias diff='colordiff'
 
 # Common options
-alias mkdir='mkdir -pv'
+alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hs'
 
@@ -86,10 +86,11 @@ EDITOR="/usr/bin/vim"
 ## Bash completion
 # UBUNTU
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+  . /etc/bash_completion
 # ARCHLINUX
-elif [ -f /usr/share/bash-completion ] && ! shopt -oq posix; then
-    . /usr/share/bash-completion
+elif [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
+  . /usr/share/bash-completion/bash_completion
+  . /usr/share/git/git-prompt.sh
 fi
 
 ## Colored manpages
