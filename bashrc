@@ -36,12 +36,6 @@ alias sudo="sudo "
 alias apache_start="sudo apachectl -k start"
 alias apache_stop="sudo apachectl -k graceful-stop"
 alias apache_restart="sudo apachectl -k graceful"
-alias red="redpomo"
-
-## Todo
-export TODOTXT_DEFAULT_ACTION=ls
-alias t="grc todo.sh"
-complete -F _todo t
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
