@@ -108,6 +108,9 @@ LESS_TERMCAP_us=$'\E[01;32m'
 ## Bashmarks
 source "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
 
+## Rails Completion
+source "$HOME/.dotfiles/bundle/rails_completion/rails.bash"
+
 ## Path
 PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
