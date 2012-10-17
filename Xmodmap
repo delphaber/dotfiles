@@ -1,4 +1,9 @@
-remove lock = Caps_Lock
-keycode 66 = Shift_R
-remove shift = Shift_R
-add shift = Shift_R
+! Clone Shift on Caps Lock
+! remove lock = Caps_Lock
+! keycode 66 = Shift_R
+! remove shift = Shift_R
+! add shift = Shift_R
+
+! Clone Escape on Caps Lock
+clear Lock
+keycode 0x42 = Escape
