@@ -111,6 +111,9 @@ source "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
 ## Rails Completion
 source "$HOME/.dotfiles/bundle/rails_completion/rails.bash"
 
+## Rake Completion
+source "$HOME/.dotfiles/bundle/rake_completion/rake"
+
 ## Path
 PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
