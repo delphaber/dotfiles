@@ -145,3 +145,8 @@ fi
 
 #Fix gvim global menu on UBUNTU
 function gvim () { (/usr/bin/gvim -f "$@" &) }
+
+#Remap CAPS LOCK to Escape
+if [[ $DISPLAY ]]
+  xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+fi
