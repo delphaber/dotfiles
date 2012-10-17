@@ -35,4 +35,8 @@ nnoremap ò @
 " show the available tabs
 noremap <leader>b :buffers<CR>
 
+" disable vimperator on gmail
+autocmd LocationChange .* js modes.passAllKeys = /mail\.google\.com/.test(buffer.URL)
+autocmd LocationChange .* echo ""
+
 " vim: ft=vim
