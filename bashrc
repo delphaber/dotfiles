@@ -20,10 +20,9 @@ NC='\[\e[0m\]'
 PROMPT_INFO="${BLACK}[\A] ${green}\u${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
 PROMPT_GIT="${GREEN}\$(__git_ps1)"
-PROMPT_VIM="\n\$(jobs | grep -o 'vim' &> /dev/null && echo \"${red}\" || echo \"${BLACK}\")↳ "
-PROMPT_FOOTER="${GREEN}\$ ${NC}"
+PROMPT_FOOTER="\n\$(jobs | grep -o 'vim' &> /dev/null && echo \"${red}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
-PS1="\n${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_VIM}${PROMPT_FOOTER}"
+PS1="\n${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 alias ls="ls -hFG"
