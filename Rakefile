@@ -48,3 +48,9 @@ desc %(Create backup dir)
 task :backup_dir do
   mkdir_p BACKUP_DIR unless File.directory?(BACKUP_DIR)
 end
+
+desc %(Update repo and submodules)
+task :update do
+  sh "git pull origin master"
+  sh "git submodule foreach git pull origin master"
+end
