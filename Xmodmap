@@ -1,0 +1,4 @@
+remove lock = Caps_Lock
+keycode 66 = Shift_R
+remove shift = Shift_R
+add shift = Shift_R

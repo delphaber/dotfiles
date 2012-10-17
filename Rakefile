@@ -11,6 +11,7 @@ DOTFILES = %w(
   inputrc
   irbrc
   rvmrc
+  Xmodmap
 )
 
 task :init_submodules do
