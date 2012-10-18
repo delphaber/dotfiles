@@ -81,7 +81,7 @@ HISTFILESIZE=10000
 HISTCONTROL="ignoreboth"
 
 ## Editor
-EDITOR="/usr/bin/vim"
+export EDITOR="vim"
 
 ## Bash completion
 # UBUNTU
