@@ -76,9 +76,9 @@ shopt -s histappend     # Append to history rather than overwrite.
 shopt -s nocaseglob     # Pathname expansion will be treated as case-insensitive.
 
 ## History
-HISTSIZE=10000
-HISTFILESIZE=10000
-HISTCONTROL="ignoreboth"
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTCONTROL="ignoreboth"
 
 ## Editor
 export EDITOR="vim"
@@ -94,13 +94,13 @@ elif [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; the
 fi
 
 ## Colored manpages
-LESS_TERMCAP_mb=$'\E[01;31m'
-LESS_TERMCAP_md=$'\E[01;31m'
-LESS_TERMCAP_me=$'\E[0m'
-LESS_TERMCAP_se=$'\E[0m'
-LESS_TERMCAP_so=$'\E[01;44;33m'
-LESS_TERMCAP_ue=$'\E[0m'
-LESS_TERMCAP_us=$'\E[01;32m'
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
 
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
