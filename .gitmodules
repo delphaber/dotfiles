@@ -1,9 +1,0 @@
-[submodule "bundle/bashmarks"]
-	path = bundle/bashmarks
-	url = git@github.com:delphaber/bashmarks.git
-[submodule "bundle/rails_completion"]
-	path = bundle/rails_completion
-	url = git://github.com/jweslley/rails_completion.git
-[submodule "bundle/rake_completion"]
-	path = bundle/rake_completion
-	url = git://github.com/ai/rake-completion.git

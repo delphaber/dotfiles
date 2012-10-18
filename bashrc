@@ -106,13 +106,13 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ## Bashmarks
-source "$HOME/.dotfiles/bundle/bashmarks/bashmarks.sh"
+source "$HOME/.dotfiles/lib/bashmarks"
 
 ## Rails Completion
-source "$HOME/.dotfiles/bundle/rails_completion/rails.bash"
+source "$HOME/.dotfiles/lib/rails_completion"
 
 ## Rake Completion
-source "$HOME/.dotfiles/bundle/rake_completion/rake"
+source "$HOME/.dotfiles/lib/rake_completion"
 
 ## Path
 PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
