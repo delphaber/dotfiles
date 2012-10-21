@@ -18,7 +18,7 @@ WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
-PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
+PROMPT_RUBY="[\$(rvm-prompt)]"
 PROMPT_GIT="${YELLOW}\$(__git_ps1)"
 PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
 
