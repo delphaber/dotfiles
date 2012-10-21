@@ -103,7 +103,12 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 ## RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+  source "$HOME/.rvm/scripts/rvm"
+elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
+  source "/usr/local/rvm/scripts/rvm"
+fi
+
 
 ## Bashmarks
 source "$HOME/.dotfiles/lib/bashmarks"
@@ -115,7 +120,7 @@ source "$HOME/.dotfiles/lib/rails_completion"
 source "$HOME/.dotfiles/lib/rake_completion"
 
 ## Path
-PATH="$PATH:$HOME/.rvm/bin:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
+PATH="$PATH:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
 ## Custom functions
 
