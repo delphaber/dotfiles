@@ -120,7 +120,7 @@ source "$HOME/.dotfiles/lib/rails_completion"
 source "$HOME/.dotfiles/lib/rake_completion"
 
 ## Path
-PATH="$PATH:$HOME/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
+PATH="$PATH:$HOME/bin:/usr/local/heroku/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
 ## Custom functions
 
@@ -153,3 +153,6 @@ fi
 
 #Fix gvim global menu on UBUNTU
 function gvim () { (/usr/bin/gvim -f "$@" &) }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
