@@ -103,12 +103,7 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 ## RVM
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-  source "$HOME/.rvm/scripts/rvm"
-elif [[ -s "/usr/local/rvm/scripts/rvm" ]]; then
-  source "/usr/local/rvm/scripts/rvm"
-fi
-
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ## Bashmarks
 source "$HOME/.dotfiles/lib/bashmarks"
