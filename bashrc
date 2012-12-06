@@ -58,9 +58,10 @@ alias wget='wget -c'
 alias recent='ls -lAt | head'
 alias ports='netstat -tulanp'
 alias apt-get='sudo apt-get'
-alias apache-error='tailf /var/log/apache2/error.log'
-alias apache-log='tailf /var/log/apache2/access.log'
-alias apache-restart='sudo service apache2 restart'
+alias apache2-error='tailf /var/log/apache2/error.log'
+alias apache2-log='tailf /var/log/apache2/access.log'
+alias apache2-restart='sudo service apache2 restart'
+alias apache2-reload='sudo service apache2 reload'
 alias mysql-restart='sudo service mysql restart'
 
 # Add an "alert" alias for long running commands.  Use like so:
