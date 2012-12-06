@@ -73,8 +73,9 @@
   email = fabrizio.monti@welaika.com
 
 [giggle]
-	main-window-maximized = true
-	main-window-geometry = 614x312+378+177
-	file-view-vpane-position = 989
-	history-view-vpane-position = 754
+	main-window-maximized = false
+	main-window-geometry = 631x324+948+43
+	file-view-vpane-position = 49
+	history-view-vpane-position = 37
 	main-window-view = HistoryView
+	file-view-hpane-position = 373
