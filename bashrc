@@ -18,7 +18,7 @@ WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
 PROMPT_INFO="${BLACK}[\A] ${green}\u${NC} ${BLUE}\w"
-PROMPT_RUBY="[\$(~/.rvm/bin/rvm-prompt)]"
+PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
 PROMPT_GIT="${GREEN}\$(__git_ps1)"
 PROMPT_FOOTER="\n\$(jobs | grep -o 'vim' &> /dev/null && echo \"${red}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
@@ -51,7 +51,6 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
-export PATH="$HOME/bin:$HOME/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/usr/local/heroku/bin:$PATH"
 export WORKON_HOME="$HOME/.virtualenvs"
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
