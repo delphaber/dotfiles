@@ -1,8 +1,11 @@
 # PATH shenaningans
-export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/python:/usr/local/heroku/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/share/python:$PATH"
 
 # load up rbenv
 [ -f `which rbenv` ] && eval "$(rbenv init -)"
 
-# just load .bashrc
+# add binstubs folder to path
+export PATH="./bin:$PATH"
+
+# load .bashrc
 source $HOME/.bashrc
