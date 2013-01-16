@@ -73,7 +73,7 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ## Virtualenv wrapper
-has_virtualenv() {
+function has_virtualenv {
   if [ -e .venv ]; then
     venv=$(cat .venv)
     if [[ $(type -t workon) != "function" ]]; then
@@ -84,7 +84,7 @@ has_virtualenv() {
     fi
   fi
 }
-venv_cd () {
+function venv_cd {
   cd "$@" && has_virtualenv
 }
 alias cd="venv_cd"
@@ -105,6 +105,46 @@ function 3box {
 
 function transtun {
   ssh -p 8532 `3box_address` -L 9091:192.168.1.2:9091
+}
+
+## Other utilies
+# go back n directories
+function b {
+    str=""
+    count=0
+    while [ "$count" -lt "$1" ];
+    do
+        str=$str"../"
+        let count=count+1
+    done
+    cd $str
+}
+
+# extract files: depends on zip, unrar and p7zip
+function ex {
+    if [ -f $1 ] ; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via ex()" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
+
+# mkdir && cd
+function mcd {
+  mkdir -p "$1" && cd "$1";
 }
 
 ## Some random fortune

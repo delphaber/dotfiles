@@ -73,8 +73,10 @@
   name = Ju Liu
   email = ju.liu@welaika.com
 
-# vim: ft=gitconfig
 [push]
-	default = matching
+  default = matching
+
 [heroku]
-	account = welaika
+  account = welaika
+
+; vim: ft=gitconfig
