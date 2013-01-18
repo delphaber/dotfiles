@@ -33,6 +33,7 @@
   # branches
   branches = branch -v
   br = checkout
+  bra = branch -a
   newbr = checkout -b
   rmbr = branch -d
   trackbr = git checkout --track
