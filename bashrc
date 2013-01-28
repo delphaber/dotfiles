@@ -17,10 +17,14 @@ white='\[\e[0;37m\]'
 WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
+function is_vim_running {
+  jobs | grep -o 'vim' &> /dev/null
+}
+
 PROMPT_INFO="${BLACK}[\A] ${green}\u${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
 PROMPT_GIT="${GREEN}\$(__git_ps1)"
-PROMPT_FOOTER="\n\$(jobs | grep -o 'vim' &> /dev/null && echo \"${red}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
+PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
 PS1="\n${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
@@ -31,6 +35,7 @@ alias recent="ls -lAt"
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
+alias im="vim"
 alias grep="grep --color=auto"
 alias sudo="sudo "
 alias apache_start="sudo apachectl -k start"
