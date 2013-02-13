@@ -17,10 +17,14 @@ white='\[\e[0;37m\]'
 WHITE='\[\e[1;37m\]'
 NC='\[\e[0m\]'
 
+function is_vim_running {
+  jobs | grep -o 'vim' &> /dev/null
+}
+
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rvm-prompt)]"
 PROMPT_GIT="${YELLOW}\$(__git_ps1)"
-PROMPT_FOOTER="\n${BLACK}↳ ${GREEN}\$ ${NC}"
+PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
 PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
