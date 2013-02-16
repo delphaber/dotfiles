@@ -153,3 +153,7 @@ fi
 
 #Fix gvim global menu on UBUNTU
 function gvim () { (/usr/bin/gvim -f "$@" &) }
+
+#Change default cursor background color
+#to fix gnome-terminal with vim parenthesis matching
+echo -ne "\033]12;red\007"
