@@ -21,9 +21,13 @@ function is_vim_running {
   jobs | grep -o 'vim' &> /dev/null
 }
 
+function is_branch_clean {
+  git status | grep "nothing to commit" &> /dev/null
+}
+
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rvm-prompt)]"
-PROMPT_GIT="${YELLOW}\$(__git_ps1)"
+PROMPT_GIT="\$(is_branch_clean && echo \"${GREEN}\" || echo \"${YELLOW}\")\$(__git_ps1)"
 PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
 PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
