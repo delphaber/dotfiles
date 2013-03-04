@@ -5,6 +5,9 @@ set novisualbell
 " arrange statusline order
 set status=location,input,bookmark,history,tabcount,position
 
+" display link previews on the right
+set showstatuslinks=2
+
 " use MacVim
 set editor='bash -lc "mvim -f \$*" mvim '
 
@@ -35,8 +38,11 @@ nnoremap ò @
 " show the available tabs
 noremap <leader>b :buffers<CR>
 
+" disable vimperator con <C-z>
+nnoremap <C-z> :ignorekeys add .<cr>r
+nnoremap <C-x> :ignorekeys rm .<cr>
+
 " disable vimperator on gmail
-autocmd LocationChange .* js modes.passAllKeys = /mail\.google\.com/.test(buffer.URL)
-autocmd LocationChange .* echo ""
+ignorekeys add /mail\.google\.com/
 
 " vim: ft=vim
