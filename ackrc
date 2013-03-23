@@ -1,7 +1,9 @@
 --type-set=sass=.sass
 --type-set=scss=.scss
+--type-set=styl=.styl
 --type-set=haml=.haml
 --type-set=slim=.slim
+--type-set=jade=.jade
 --type-set=yaml=.yml
 --type-set=erb=.erb
 --type-set=coffee=.coffee

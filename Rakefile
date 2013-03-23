@@ -8,6 +8,7 @@ DOTFILES = %w(
   bash_profile
   gemrc
   gitconfig
+  gitexcludes
   inputrc
   irbrc
   rvmrc

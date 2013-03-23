@@ -80,4 +80,10 @@
 [heroku]
   account = welaika
 
+[pull]
+  rebase = true
+
+[core]
+  excludesfile = ~/.gitexcludes
+
 ; vim: ft=gitconfig
