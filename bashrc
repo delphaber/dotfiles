@@ -102,12 +102,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 ## Bashmarks
 source "$HOME/.dotfiles/lib/bashmarks"
 
-## Rails Completion
-source "$HOME/.dotfiles/lib/rails_completion"
-
-## Rake Completion
-source "$HOME/.dotfiles/lib/rake_completion"
-
 ## Path
 PATH="$PATH:$HOME/bin:/usr/local/heroku/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
 
