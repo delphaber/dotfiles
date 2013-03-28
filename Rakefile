@@ -1,4 +1,4 @@
-task :default => [:backup_dir, :backup, :link, :init_submodules]
+task :default => [:backup_dir, :backup, :link]
 
 DOTFILES_DIR = ".dotfiles"
 BACKUP_DIR = "backup"
@@ -6,17 +6,13 @@ DOTFILES = %w(
   ackrc
   bashrc
   bash_profile
+  curlc
   gemrc
   gitconfig
+  gitignore_global
   inputrc
-  irbrc
   rvmrc
-  Xmodmap
 )
-
-task :init_submodules do
-  sh "git submodule update --init"
-end
 
 desc %(Make symlinks of dotfiles)
 task :link do
@@ -48,10 +44,4 @@ end
 desc %(Create backup dir)
 task :backup_dir do
   mkdir_p BACKUP_DIR unless File.directory?(BACKUP_DIR)
-end
-
-desc %(Update repo and submodules)
-task :update do
-  sh "git pull origin master"
-  sh "git submodule foreach git pull origin master"
 end
