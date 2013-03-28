@@ -30,21 +30,23 @@ PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 
-# https://wiki.archlinux.org/index.php/Sudo#Passing_aliases
-alias sudo='sudo '
-
-# Appereance
 alias ls='ls -hF --color=auto'
-alias la='ls -lA --color=auto'
+alias la='ls -lhAF --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias diff='colordiff'
-
-# Common options
 alias mkdir='mkdir -p'
 alias df='df -h'
-alias du='du -hs'
+alias du='du -hc'
+
+alias recent='ls -lhAFt --color=auto'
+alias ports='netstat -tulanp'
+alias apache2_restart='sudo service apache2 restart'
+alias mysql_restart='sudo service mysql restart'
+
+# Expand aliases with sudo too
+alias sudo='sudo '
 
 # Security
 alias rm='rm -i --preserve-root'
@@ -54,19 +56,6 @@ alias ln='ln -i'
 alias chown='chown --preserve-root'
 alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
-
-# Cosiness
-alias ..='cd ..'
-alias ,,='cd -'
-alias wget='wget -c'
-alias recent='ls -lAt | head'
-alias ports='netstat -tulanp'
-alias apt-get='sudo apt-get'
-alias apache2-error='tailf /var/log/apache2/error.log'
-alias apache2-log='tailf /var/log/apache2/access.log'
-alias apache2-restart='sudo service apache2 restart'
-alias apache2-reload='sudo service apache2 reload'
-alias mysql-restart='sudo service mysql restart'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -153,5 +142,27 @@ fi
 
 #Fix gvim global menu on UBUNTU
 function gvim () { (/usr/bin/gvim -f "$@" &) }
+
+## Extract files: depends on zip, unrar and p7zip
+function ex {
+    if [ -f $1 ] ; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via ex()" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
 
 export YII_ENVIRONMENT=DEVELOPMENT
