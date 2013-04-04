@@ -161,4 +161,9 @@ function ex {
      fi
 }
 
+function ltree()
+{
+    tree -C $* | less -R
+}
+
 export YII_ENVIRONMENT=DEVELOPMENT
