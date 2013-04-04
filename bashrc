@@ -36,6 +36,7 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 alias im="vim"
+alias hs='history | grep --color=auto'
 alias grep="grep --color=auto"
 alias sudo="sudo "
 alias apache_start="sudo apachectl -k start"
@@ -73,9 +74,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-## RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ## Virtualenv wrapper
 function has_virtualenv {
