@@ -105,7 +105,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 source "$HOME/.dotfiles/lib/bashmarks"
 
 ## Path
-PATH="$PATH:$HOME/bin:/usr/local/heroku/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools"
+PATH="$PATH:$HOME/bin:/usr/local/heroku/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:./node_modules/.bin"
 
 ## Custom functions
 
