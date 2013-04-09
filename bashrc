@@ -31,6 +31,7 @@ PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 ## Aliases
 
 alias ls='ls -hF --color=auto'
+alias ll='ls -lhF --color=auto'
 alias la='ls -lhAF --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
