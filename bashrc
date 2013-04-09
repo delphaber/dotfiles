@@ -50,6 +50,7 @@ alias hk="heroku"
 
 # Expand aliases with sudo too
 alias sudo='sudo '
+alias migrate='rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare'
 
 # Security
 alias rm='rm -i --preserve-root'
