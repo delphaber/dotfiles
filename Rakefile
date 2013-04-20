@@ -12,6 +12,7 @@ DOTFILES = %w(
   gitignore_global
   inputrc
   rvmrc
+  tmux.conf
 )
 
 desc %(Make symlinks of dotfiles)
