@@ -35,10 +35,13 @@ alias recent="ls -lAt"
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
+#
 alias im="vim"
 alias hs='history | grep --color=auto'
 alias grep="grep --color=auto"
 alias sudo="sudo "
+alias r="rails "
+#
 alias apache_start="sudo apachectl -k start"
 alias apache_stop="sudo apachectl -k graceful-stop"
 alias apache_restart="sudo apachectl -k graceful"
@@ -60,6 +63,7 @@ export EDITOR="/usr/local/bin/vim"
 export WORKON_HOME="$HOME/.virtualenvs"
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
+export PATH="$PATH:$HOME/.dotfiles/bin"
 
 ## Colored manpages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -76,21 +80,21 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 ## Virtualenv wrapper
-function has_virtualenv {
-  if [ -e .venv ]; then
-    venv=$(cat .venv)
-    if [[ $(type -t workon) != "function" ]]; then
-      source /usr/local/share/python/virtualenvwrapper.sh
-    fi
-    if [[ $(basename "$VIRTUAL_ENV") != $venv ]]; then
-      workon $venv
-    fi
-  fi
-}
-function venv_cd {
-  cd "$@" && has_virtualenv
-}
-alias cd="venv_cd"
+# function has_virtualenv {
+#   if [ -e .venv ]; then
+#     venv=$(cat .venv)
+#     if [[ $(type -t workon) != "function" ]]; then
+#       source /usr/local/share/python/virtualenvwrapper.sh
+#     fi
+#     if [[ $(basename "$VIRTUAL_ENV") != $venv ]]; then
+#       workon $venv
+#     fi
+#   fi
+# }
+# function venv_cd {
+#   cd "$@" && has_virtualenv
+# }
+# alias cd="venv_cd"
 
 ## 3box
 function 3box_address {
