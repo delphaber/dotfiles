@@ -154,5 +154,12 @@ function mcd {
   mkdir -p "$1" && cd "$1";
 }
 
+# last rails migration
+function last_migration {
+  migrate_path="db/migrate/"
+  nth_migration=$((${1:-0}+1))
+  vim "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
+}
+
 ## Some random fortune
 fortune -s
