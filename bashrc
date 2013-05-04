@@ -169,5 +169,9 @@ export YII_ENVIRONMENT=DEVELOPMENT
 export NODE_PATH=$HOME/local/lib/node_modules
 export GOPATH=$HOME/gocode
 
-## Path
-PATH="$PATH:$HOME/bin:/usr/local/heroku/bin:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$HOME/local/bin:./node_modules/.bin:$GOPATH/bin"
+## PATH
+export PATH="$PATH:$HOME/local/bin"
+export PATH="$PATH:/usr/local/heroku/bin" # heroku
+export PATH="$PATH:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools" # android
+export PATH="$PATH:./node_modules/.bin" # locally installed node modules
+export PATH="$PATH:$GOPATH/bin" # GO
