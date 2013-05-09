@@ -155,10 +155,14 @@ function mcd {
 }
 
 # last rails migration
-function last_migration {
+function echo_last_migration {
   migrate_path="db/migrate/"
   nth_migration=$((${1:-0}+1))
-  vim "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
+  echo "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
+}
+
+function last_migration {
+  vim `echo_last_migration $*`
 }
 
 ## Some random fortune
