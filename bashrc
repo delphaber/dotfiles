@@ -41,6 +41,8 @@ alias hs='history | grep --color=auto'
 alias grep="grep --color=auto"
 alias sudo="sudo "
 alias r="rails "
+alias z="zeus "
+alias c="consular "
 #
 alias apache_start="sudo apachectl -k start"
 alias apache_stop="sudo apachectl -k graceful-stop"

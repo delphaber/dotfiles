@@ -17,6 +17,7 @@
 --type-set=yaml=.yml
 --type-set=json=.json
 --type-set=log=.log
+--type-set=csv=.csv
 
 --type-set=erb=.erb
 --type-set=haml=.haml
