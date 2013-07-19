@@ -165,6 +165,16 @@ function ltree()
     tree -C $* | less -R
 }
 
+function echo_last_migration {
+  migrate_path="db/migrate/"
+  nth_migration=$((${1:-0}+1))
+  echo "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
+}
+
+function last_migration {
+  vim `echo_last_migration $*`
+}
+
 export YII_ENVIRONMENT=DEVELOPMENT
 export NODE_PATH=$HOME/local/lib/node_modules
 export GOPATH=$HOME/gocode
