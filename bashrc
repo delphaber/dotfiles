@@ -181,6 +181,7 @@ export GOPATH=$HOME/gocode
 
 ## PATH
 export PATH="$PATH:$HOME/local/bin"
+export PATH="$PATH:$HOME/.rvm/bin" #rvm
 export PATH="$PATH:/usr/local/heroku/bin" # heroku
 export PATH="$PATH:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools" # android
 export PATH="$PATH:./node_modules/.bin" # locally installed node modules
