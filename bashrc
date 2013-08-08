@@ -175,6 +175,13 @@ function last_migration {
   vim `echo_last_migration $*`
 }
 
+function view_coverage {
+  report='coverage/index.html'
+  if [ -f "$report" ]; then
+    xdg-open "$report"
+  fi
+}
+
 export YII_ENVIRONMENT=DEVELOPMENT
 export NODE_PATH=$HOME/local/lib/node_modules
 export GOPATH=$HOME/gocode
