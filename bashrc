@@ -103,9 +103,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 ## RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-## Bashmarks
-source "$HOME/.dotfiles/lib/bashmarks"
-
 ## Custom functions
 
 function trebox-hostname() {
@@ -193,3 +190,7 @@ export PATH="$PATH:/usr/local/heroku/bin" # heroku
 export PATH="$PATH:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools" # android
 export PATH="$PATH:./node_modules/.bin" # locally installed node modules
 export PATH="$PATH:$GOPATH/bin" # GO
+
+## EXTRA SOURCE
+source "$HOME/.dotfiles/lib/bashmarks"
+source "$HOME/.dotfiles/lib/tmuxinator"
