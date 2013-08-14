@@ -81,6 +81,9 @@ export HISTCONTROL="ignoreboth"
 ## Editor
 export EDITOR="vim"
 
+## Other exports
+export DISABLE_AUTO_TITLE=true
+
 ## Bash completion
 # UBUNTU
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
