@@ -83,6 +83,7 @@ export EDITOR="vim"
 
 ## Other exports
 export DISABLE_AUTO_TITLE=true
+export TERM=screen-256color
 
 ## Bash completion
 # UBUNTU
