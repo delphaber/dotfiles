@@ -193,7 +193,7 @@ export PATH="$PATH:$HOME/.rvm/bin" #rvm
 export PATH="$PATH:/usr/local/heroku/bin" # heroku
 export PATH="$PATH:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools" # android
 export PATH="$PATH:./node_modules/.bin" # locally installed node modules
-export PATH="$PATH:$GOPATH/bin" # GO
+export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin" #GO
 
 ## EXTRA SOURCE
 source "$HOME/.dotfiles/lib/bashmarks"
