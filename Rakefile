@@ -4,8 +4,9 @@ DOTFILES_DIR = ".dotfiles"
 BACKUP_DIR = "backup"
 DOTFILES = %w(
   ackrc
-  bashrc
   bash_profile
+  bashrc
+  editrc
   gemrc
   gitconfig
   gitexcludes
