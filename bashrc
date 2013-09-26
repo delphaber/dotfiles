@@ -45,6 +45,7 @@ alias recent='ls -lhAFt --color=auto'
 alias ports='netstat -tulanp'
 alias apache2_restart='sudo service apache2 restart'
 alias mysql_restart='sudo service mysql restart'
+alias open='xdg-open'
 
 alias hk="heroku"
 
