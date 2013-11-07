@@ -48,10 +48,10 @@ alias mysql_restart='sudo service mysql restart'
 alias open='xdg-open'
 
 alias hk="heroku"
+alias migrate='rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare'
 
 # Expand aliases with sudo too
 alias sudo='sudo '
-alias rdm='rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare'
 
 # Security
 alias rm='rm -i --preserve-root'
