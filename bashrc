@@ -196,6 +196,7 @@ export PATH="$PATH:/usr/local/heroku/bin" # heroku
 export PATH="$PATH:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools" # android
 export PATH="$PATH:./node_modules/.bin" # locally installed node modules
 export PATH="$PATH:$GOROOT/bin:$GOPATH/bin" #GO
+export PATH="$PATH:$HOME/.dotfiles/bin"
 
 ## EXTRA SOURCE
 source "$HOME/.dotfiles/lib/bashmarks"
