@@ -40,9 +40,11 @@ alias im="vim"
 alias hs='history | grep --color=auto'
 alias grep="grep --color=auto"
 alias sudo="sudo "
-alias r="rails "
-alias z="zeus "
-alias c="consular "
+#
+alias rs="rails server"
+alias zs="zeus start"
+alias cs="consular start"
+alias fs="foreman start"
 #
 alias apache_start="sudo apachectl -k start"
 alias apache_stop="sudo apachectl -k graceful-stop"
@@ -100,7 +102,7 @@ fi
 
 ## 3box
 function 3box_address {
-  ssid=$(airport -I | grep -Po "(?<=\bSSID: ).*")
+  ssid=$(airport -I | perl -nle 'print $& if m{(?<=\bSSID: ).*}')
   if [[ $ssid == "allippiti" ]]; then
     echo "192.168.1.2"
   else
