@@ -184,6 +184,7 @@ function view_coverage {
   fi
 }
 
+export RAILS_ENV=development
 export YII_ENVIRONMENT=DEVELOPMENT
 export NODE_PATH=$HOME/local/lib/node_modules
 export GOROOT=/usr/local/go
