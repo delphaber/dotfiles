@@ -22,7 +22,7 @@ function is_vim_running {
 }
 
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
-PROMPT_RUBY="[\$(rvm-prompt)]"
+PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
 PROMPT_GIT="${YELLOW}\$(__git_ps1)"
 PROMPT_FOOTER="\n\$(is_vim_running && echo \"${RED}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
@@ -87,13 +87,8 @@ export DISABLE_AUTO_TITLE=true
 export TERM=screen-256color
 
 ## Bash completion
-# UBUNTU
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
-# ARCHLINUX
-elif [ -f /usr/share/bash-completion/bash_completion ] && ! shopt -oq posix; then
-  . /usr/share/bash-completion/bash_completion
-  . /usr/share/git/git-prompt.sh
 fi
 
 ## Colored manpages
@@ -104,9 +99,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-
-## RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 ## Custom functions
 
@@ -127,14 +119,6 @@ function transmission-3box() {
 
 function sshfs-3box() {
   sshfs -p 8532 `trebox-hostname`:/ /media/3box/
-}
-
-function update() {
-if uname -a | grep -q '\bUbuntu\b'
-  then sudo apt-get update && sudo apt-get upgrade
-elif uname -a | grep -q '\bARCH\b'
-  then yaourt -Syu --aur
-fi
 }
 
 #Fix gvim global menu on UBUNTU
@@ -167,6 +151,11 @@ function ltree()
     tree -C $* | less -R
 }
 
+# mkdir && cd
+function mcd {
+  mkdir -p "$1" && cd "$1";
+}
+
 function echo_last_migration {
   migrate_path="db/migrate/"
   nth_migration=$((${1:-0}+1))
@@ -186,20 +175,15 @@ function view_coverage {
 
 export RAILS_ENV=development
 export YII_ENVIRONMENT=DEVELOPMENT
+export RAILS_ENVIRONMENT=development
 export NODE_PATH=$HOME/local/lib/node_modules
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/gocode
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 ## PATH
-export PATH="./bin:$PATH"
-export PATH="$PATH:$HOME/local/bin"
-export PATH="$PATH:$HOME/.rvm/bin" #rvm
-export PATH="$PATH:/usr/local/heroku/bin" # heroku
-export PATH="$PATH:$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools" # android
-export PATH="$PATH:./node_modules/.bin" # locally installed node modules
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin" #GO
-export PATH="$PATH:$HOME/.dotfiles/bin"
+export PATH="$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$PATH"
+export PATH="./bin:$HOME/local/bin:./node_modules/.bin/:$HOME/.dotfiles/bin:$PATH"
 
 ## EXTRA SOURCE
 source "$HOME/.dotfiles/lib/bashmarks"
-source "$HOME/.dotfiles/lib/tmuxinator"
