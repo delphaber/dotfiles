@@ -173,7 +173,6 @@ function view_coverage {
   fi
 }
 
-export RAILS_ENV=development
 export YII_ENVIRONMENT=DEVELOPMENT
 export RAILS_ENVIRONMENT=development
 export NODE_PATH=$HOME/local/lib/node_modules
