@@ -154,7 +154,7 @@ function ex {
 }
 
 # mkdir && cd
-function mcd {
+function mkcd {
   mkdir -p "$1" && cd "$1";
 }
 
