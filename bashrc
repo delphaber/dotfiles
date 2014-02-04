@@ -64,9 +64,6 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
-export WORKON_HOME="$HOME/.virtualenvs"
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
-export PIP_RESPECT_VIRTUALENV=true
 export PATH="$PATH:$HOME/.dotfiles/bin"
 
 ## Colored manpages
@@ -82,41 +79,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-## Virtualenv wrapper
-# function has_virtualenv {
-#   if [ -e .venv ]; then
-#     venv=$(cat .venv)
-#     if [[ $(type -t workon) != "function" ]]; then
-#       source /usr/local/share/python/virtualenvwrapper.sh
-#     fi
-#     if [[ $(basename "$VIRTUAL_ENV") != $venv ]]; then
-#       workon $venv
-#     fi
-#   fi
-# }
-# function venv_cd {
-#   cd "$@" && has_virtualenv
-# }
-# alias cd="venv_cd"
-
-## 3box
-function 3box_address {
-  ssid=$(airport -I | perl -nle 'print $& if m{(?<=\bSSID: ).*}')
-  if [[ $ssid == "allippiti" ]]; then
-    echo "192.168.1.2"
-  else
-    echo "3box.delphaber.com"
-  fi
-}
-
-function 3box {
-  ssh -p 8532 `3box_address`
-}
-
-function transtun {
-  ssh -p 8532 `3box_address` -L 9091:192.168.1.2:9091
-}
 
 ## Other utilies
 # go back n directories
