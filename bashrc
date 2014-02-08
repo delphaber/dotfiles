@@ -84,7 +84,6 @@ export EDITOR="vim"
 
 ## Other exports
 export DISABLE_AUTO_TITLE=true
-export TERM=screen-256color
 
 ## Bash completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
