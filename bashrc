@@ -43,7 +43,6 @@ alias sudo="sudo "
 #
 alias rs="rails server"
 alias zs="zeus start"
-alias cs="consular start"
 alias fs="foreman start"
 #
 alias apache_start="sudo apachectl -k start"
@@ -129,6 +128,10 @@ function echo_last_migration {
 
 function last_migration {
   vim `echo_last_migration $*`
+}
+
+function cs {
+  consular start $(basename $PWD)
 }
 
 ## Some random fortune
