@@ -4,31 +4,21 @@
 
 [alias]
   # shortcuts
-  ci = commit
-  co = checkout
-  di = diff
-  dc = diff --cached
   addp = add -p .
+  br = branch
+  bra = branch -av
+  ch = checkout
+  co = commit
+  di = diff
+  dis = diff --staged
+  re = reset
+  reh = reset --hard
   st = status
   ss = status --short
 
   # info
   fame = shortlog -s --
   last = log -1 HEAD
-
-  # undo
-  unadd = reset HEAD --
-  unstage = reset HEAD --
-  unch = checkout --
-  unci = reset --soft
-  rmun = clean -f
-
-  # branches
-  branches = branch -av
-  br = checkout
-  newbr = checkout -b
-  rmbr = branch -d
-  menoff = merge --no-ff
 
   # assume-unchanged
   assume = update-index --assume-unchanged
@@ -46,13 +36,7 @@
   al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 
   # tag
-  tags = tag
   lasttag = describe --tags --abbrev=0
-
-  # others
-  reco = commit --amend
-  resolved = add
-  remotes = remote -v
 
 [color]
   ui = auto
