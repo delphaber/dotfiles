@@ -7,10 +7,10 @@
   addp = add -p .
   br = branch
   bra = branch -av
-  ch = checkout
-  co = commit
+  co = checkout
+  ci = commit
   di = diff
-  dis = diff --staged
+  ds = diff --staged
   re = reset
   reh = reset --hard
   st = status
