@@ -12,7 +12,6 @@
   di = diff
   ds = diff --staged
   re = reset
-  reh = reset --hard
   st = status
   ss = status --short
 
