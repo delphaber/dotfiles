@@ -15,6 +15,9 @@
   st = status
   ss = status --short
 
+  unstage = reset HEAD --
+  unchange = checkout --
+
   # info
   fame = shortlog -s --
   last = log -1 HEAD
