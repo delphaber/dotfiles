@@ -21,6 +21,8 @@ function is_vim_running {
   jobs | grep -o 'vim' &> /dev/null
 }
 
+GIT_PS1_SHOWDIRTYSTATE=true
+
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
 PROMPT_GIT="${YELLOW}\$(__git_ps1)"
