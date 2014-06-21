@@ -23,6 +23,7 @@ function is_vim_running {
 
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWUPSTREAM="auto"
 
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
