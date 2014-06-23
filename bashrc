@@ -180,14 +180,13 @@ function view_coverage {
 
 export YII_ENVIRONMENT=DEVELOPMENT
 export RAILS_ENVIRONMENT=development
-export NODE_PATH=$HOME/local/lib/node_modules
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 ## PATH
 export PATH="$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$PATH"
-export PATH="./bin:$HOME/local/bin:./node_modules/.bin/:$HOME/.dotfiles/bin:$PATH"
+export PATH="./bin:./node_modules/.bin:$HOME/local/bin:$HOME/.dotfiles/bin:$PATH"
 
 ## EXTRA SOURCE
 source "$HOME/.dotfiles/lib/bashmarks"
