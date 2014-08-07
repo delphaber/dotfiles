@@ -106,27 +106,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-## Custom functions
-
-function trebox-hostname() {
-  if [[ `iwgetid --raw` == 'allippiti' ]]
-    then echo "192.168.1.2"
-    else echo "3box.delphaber.com"
-  fi
-}
-
-function ssh-3box() {
-  ssh -p 8532 `trebox-hostname`;
-}
-
-function transmission-3box() {
-  ssh -p 8532 -L 9091:127.0.0.1:9091 `trebox-hostname`;
-}
-
-function sshfs-3box() {
-  sshfs -p 8532 `trebox-hostname`:/ /media/3box/
-}
-
 #Fix gvim global menu on UBUNTU
 function gvim () { (/usr/bin/gvim -f "$@" &) }
 
