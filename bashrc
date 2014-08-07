@@ -161,12 +161,13 @@ function view_coverage {
 export YII_ENVIRONMENT=DEVELOPMENT
 export RAILS_ENVIRONMENT=development
 
+## rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-## PATH
-export PATH="$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$PATH"
-export PATH="./bin:./node_modules/.bin:$HOME/local/bin:$HOME/.dotfiles/bin:$PATH"
+## heroku
+export PATH="/usr/local/heroku/bin:$PATH"
 
-## EXTRA SOURCE
-source "$HOME/.dotfiles/lib/bashmarks"
+## path
+export PATH="$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$PATH"
+export PATH="./bin:./node_modules/.bin:$HOME/local/bin:$PATH"
