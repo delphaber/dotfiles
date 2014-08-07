@@ -88,6 +88,7 @@ export HISTCONTROL="ignoreboth"
 
 ## Editor
 export EDITOR="vim"
+export PAGER="most"
 
 ## Other exports
 export DISABLE_AUTO_TITLE=true
@@ -97,14 +98,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
 
-## Colored manpages
-export LESS_TERMCAP_mb=$'\E[01;31m'
-export LESS_TERMCAP_md=$'\E[01;31m'
-export LESS_TERMCAP_me=$'\E[0m'
-export LESS_TERMCAP_se=$'\E[0m'
-export LESS_TERMCAP_so=$'\E[01;44;33m'
-export LESS_TERMCAP_ue=$'\E[0m'
-export LESS_TERMCAP_us=$'\E[01;32m'
 
 #Fix gvim global menu on UBUNTU
 function gvim () { (/usr/bin/gvim -f "$@" &) }
