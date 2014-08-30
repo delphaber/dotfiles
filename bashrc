@@ -88,7 +88,6 @@ export HISTCONTROL="ignoreboth"
 
 ## Editor
 export EDITOR="vim"
-export PAGER="most"
 
 ## Other exports
 export DISABLE_AUTO_TITLE=true
