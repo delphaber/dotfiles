@@ -21,9 +21,9 @@ function is_vim_running {
   jobs | grep -o 'vim' &> /dev/null
 }
 
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWUPSTREAM="auto"
+# GIT_PS1_SHOWDIRTYSTATE=true
+# GIT_PS1_SHOWUNTRACKEDFILES=true
+# GIT_PS1_SHOWUPSTREAM="auto"
 
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
@@ -49,11 +49,9 @@ alias git='LANGUAGE=en_GB git'
 alias recent='ls -lhAFt --color=auto'
 alias ports='netstat -tulanp'
 alias apache2_restart='sudo service apache2 restart'
-alias mysql_restart='sudo service mysql restart'
 alias open='xdg-open'
 
 alias hk="heroku"
-alias migrate='rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare'
 
 # Expand aliases with sudo too
 alias sudo='sudo '
@@ -96,10 +94,6 @@ export DISABLE_AUTO_TITLE=true
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
-
-
-#Fix gvim global menu on UBUNTU
-function gvim () { (/usr/bin/gvim -f "$@" &) }
 
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
