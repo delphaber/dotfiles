@@ -38,6 +38,7 @@
   rmbr = branch -d
   trackbr = git checkout --track
   menoff = merge --no-ff
+  cleanbr = "!git remote prune origin && git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git co -"
 
   # assume-unchanged
   as = update-index --assume-unchanged
@@ -73,6 +74,7 @@
 [user]
   name = Ju Liu
   email = ju.liu@welaika.com
+	username = Arkham
 
 [push]
   default = matching
@@ -84,6 +86,6 @@
   rebase = true
 
 [core]
-  excludesfile = ~/.gitexcludes
+	excludesfile = /Users/juliu/.global_gitignore
 
 ; vim: ft=gitconfig
