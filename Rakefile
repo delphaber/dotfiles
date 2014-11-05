@@ -13,8 +13,6 @@ DOTFILES = %w(
   gitexcludes
   inputrc
   irbrc
-  rvmrc
-  vimperatorrc
 )
 
 desc %(Make symlinks of dotfiles)

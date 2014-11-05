@@ -74,7 +74,7 @@
 [user]
   name = Ju Liu
   email = ju.liu@welaika.com
-	username = Arkham
+  username = Arkham
 
 [push]
   default = matching
@@ -86,6 +86,6 @@
   rebase = true
 
 [core]
-	excludesfile = /Users/juliu/.global_gitignore
+  excludesfile = /Users/juliu/.gitexcludes
 
 ; vim: ft=gitconfig

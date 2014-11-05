@@ -40,4 +40,3 @@ directory and will install in your home symlinks to the dotfiles in the
   - history search of commands: type ls, press `↑` and browse through commands
     starting with ls :)
 * irbrc integrates with 'interactive\_editor' to allow vim editing in irb
-* rvmrc disables rvms noisy messages and whiny confermation questions
