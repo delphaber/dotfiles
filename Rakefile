@@ -4,6 +4,7 @@ DOTFILES_DIR = ".dotfiles"
 BACKUP_DIR = "backup"
 DOTFILES = %w(
   ackrc
+  ctags
   bash_profile
   bashrc
   editrc
