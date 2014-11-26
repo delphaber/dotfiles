@@ -71,6 +71,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias psql_admin='sudo su - postgres -c psql'
 alias mysql_admin='mysql -u root -proot'
 
+alias rubies='for file in $(find -type f -name ".ruby-version"); do echo "$(cat $file) $(dirname $file)"; done | sort'
+
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
 shopt -s checkwinsize   # Check window size (rows, columns) after each command.
