@@ -8,4 +8,4 @@ set ssl:check-hostname no
 set ssl:verify-certificate no
 
 # Number of jobs run in parallel in a queue.
-cmd:queue-parallel 5
+set cmd:queue-parallel 5
