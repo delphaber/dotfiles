@@ -86,10 +86,10 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 
-## Editor
-export EDITOR="vim"
 
 ## Other exports
+export EDITOR="vim"
+export PAGER="most"
 export DISABLE_AUTO_TITLE=true
 
 ## Bash completion
