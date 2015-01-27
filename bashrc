@@ -72,6 +72,8 @@ alias psql_admin='sudo su - postgres -c psql'
 alias mysql_admin='mysql -u root -proot'
 
 alias rubies='for file in $(ls **/.ruby-version); do echo $(cat $file) -- $file; done | sort -n'
+alias be='bundle exec'
+alias fs='spring stop && foreman start'
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
