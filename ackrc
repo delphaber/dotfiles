@@ -43,3 +43,4 @@
 --ignore-dir=coverage
 --ignore-dir=public/system
 --ignore-dir=.bin
+--ignore-dir=public/
