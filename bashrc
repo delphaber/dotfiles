@@ -44,7 +44,7 @@ alias diff='colordiff'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hc'
-alias git='LANGUAGE=en_GB git'
+alias g='LANGUAGE=en_GB git'
 
 alias recent='ls -lhAFt --color=auto'
 alias ports='netstat -tulanp'
