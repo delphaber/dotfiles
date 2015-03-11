@@ -160,4 +160,4 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ## path
 export PATH="$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$PATH"
-export PATH="./bin:./node_modules/.bin:$HOME/local/bin:$PATH"
+export PATH="./bin:./exe:./node_modules/.bin:$HOME/.local/bin:$PATH"
