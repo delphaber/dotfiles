@@ -64,6 +64,7 @@ export HISTFILESIZE=10000
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
 export PATH="$PATH:$HOME/.dotfiles/bin"
+export RUBY_CONFIGURE_OPTS="--disable-install-doc"
 
 ## Colored manpages
 export LESS_TERMCAP_mb=$'\E[01;31m'
