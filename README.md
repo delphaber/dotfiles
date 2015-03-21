@@ -31,7 +31,7 @@ directory and will install in your home symlinks to the dotfiles in the
   - man pages are colored
   - homebrew bash-completion compatible
   - rvm and virtualenv compatible
-* gemrc prevents installation from being installed
+* gemrc prevents documentation from being installed
 * gitconfig contains some useful aliases
 * inputrc allows some fun tricks:
   - bash file completion is case insensitive
@@ -40,3 +40,4 @@ directory and will install in your home symlinks to the dotfiles in the
   - history search of commands: type ls, press `↑` and browse through commands
     starting with ls :)
 * irbrc integrates with 'interactive\_editor' to allow vim editing in irb
+* tmux integration with vim

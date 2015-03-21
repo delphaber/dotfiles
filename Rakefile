@@ -13,6 +13,7 @@ DOTFILES = %w(
   gitexcludes
   inputrc
   irbrc
+  tmux.conf
 )
 
 desc %(Make symlinks of dotfiles)
