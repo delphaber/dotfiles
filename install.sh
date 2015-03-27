@@ -13,7 +13,6 @@ gitignore_global
 inputrc
 pryrc
 lftprc
-tmux.conf
 )
 
 function warn() {

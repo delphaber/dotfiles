@@ -21,10 +21,6 @@ function is_vim_running {
   jobs | grep -o 'vim' &> /dev/null
 }
 
-# GIT_PS1_SHOWDIRTYSTATE=true
-# GIT_PS1_SHOWUNTRACKEDFILES=true
-# GIT_PS1_SHOWUPSTREAM="auto"
-
 PROMPT_INFO="${WHITE}[\A] ${GREEN}\u${WHITE}(${GREEN}\h${WHITE})${NC} ${BLUE}\w"
 PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
 PROMPT_GIT="${YELLOW}\$(__git_ps1)"
@@ -34,9 +30,8 @@ PS1="\n${PROMPT_INFO} ${PROMPT_RUBY} ${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 
-alias ls='ls -hF --color=auto'
-alias ll='ls -lhF --color=auto'
-alias la='ls -lhAF --color=auto'
+alias ls='ls -hFG'
+alias la='ls -lhAFG'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -44,36 +39,22 @@ alias diff='colordiff'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hc'
-alias g='LANGUAGE=en_GB git'
-
-alias recent='ls -lhAFt --color=auto'
-alias ports='netstat -tulanp'
-alias apache2_restart='sudo service apache2 restart'
-alias open='xdg-open'
-
-alias hk="heroku"
 
 # Expand aliases with sudo too
 alias sudo='sudo '
 
 # Security
-alias rm='rm -i --preserve-root'
+alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias psql_admin='sudo su - postgres -c psql'
-alias mysql_admin='mysql -u root -proot'
+alias unlink='unlink -i'
 
 alias rubies='for file in $(ls **/.ruby-version); do echo $(cat $file) -- $file; done | sort -n'
 alias be='bundle exec'
-alias fs='spring stop && foreman start'
+alias hk='heroku'
+alias start_mysql='mysql.server start'
+alias start_postgres='postgres -D /usr/local/var/postgres'
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
@@ -86,17 +67,16 @@ shopt -s nocaseglob     # Pathname expansion will be treated as case-insensitive
 ## History
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-export HISTCONTROL="ignoreboth"
-
+export HISTCONTROL='ignoreboth'
 
 ## Other exports
-export EDITOR="vim"
-export PAGER="most"
-export DISABLE_AUTO_TITLE=true
+export EDITOR='/usr/local/bin/vim'
+export PAGER='most'
+export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 
 ## Bash completion
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-  . /etc/bash_completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
 fi
 
 ## Extract files: depends on zip, unrar and p7zip
@@ -132,7 +112,7 @@ function mcd {
 }
 
 function echo_last_migration {
-  migrate_path="db/migrate/"
+  migrate_path='db/migrate/'
   nth_migration=$((${1:-0}+1))
   echo "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
 }
@@ -144,20 +124,6 @@ function last_migration {
 function view_coverage {
   report='coverage/index.html'
   if [ -f "$report" ]; then
-    xdg-open "$report"
+    open "$report"
   fi
 }
-
-export YII_ENVIRONMENT=DEVELOPMENT
-export RAILS_ENVIRONMENT=development
-
-## rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-## heroku
-export PATH="/usr/local/heroku/bin:$PATH"
-
-## path
-export PATH="$HOME/App/android-sdk/tools:$HOME/App/android-sdk/platform-tools:$PATH"
-export PATH="./bin:./exe:./node_modules/.bin:$HOME/.local/bin:$PATH"
