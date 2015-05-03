@@ -1,0 +1,5 @@
+colorscheme:rails_logger
+cs_re:green:INFO
+cs_re:red:ERROR
+cs_re:red:FATAL
+cs_re:yellow:WARN

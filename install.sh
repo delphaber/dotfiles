@@ -14,6 +14,7 @@ inputrc
 pryrc
 lftprc
 tmux.conf
+multitailrc
 )
 
 function warn() {
