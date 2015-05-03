@@ -50,6 +50,7 @@ alias cp='cp -i'
 alias ln='ln -i'
 alias unlink='unlink -i'
 
+alias g='git'
 alias rubies='for file in $(ls **/.ruby-version); do echo $(cat $file) -- $file; done | sort -n'
 alias be='bundle exec'
 alias hk='heroku'
