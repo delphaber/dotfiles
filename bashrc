@@ -54,8 +54,7 @@ alias g='git'
 alias rubies='for file in $(ls **/.ruby-version); do echo $(cat $file) -- $file; done | sort -n'
 alias be='bundle exec'
 alias hk='heroku'
-alias start_mysql='mysql.server start'
-alias start_postgres='postgres -D /usr/local/var/postgres'
+alias whenever_development="whenever --update-crontab --set environment='development'"
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
