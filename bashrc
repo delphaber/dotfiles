@@ -79,6 +79,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+source ~/.dotfiles/tmuxinator.bash
+
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
     if [ -f $1 ] ; then
