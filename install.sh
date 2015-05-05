@@ -15,6 +15,7 @@ pryrc
 lftprc
 tmux.conf
 multitailrc
+agignore
 )
 
 function warn() {
