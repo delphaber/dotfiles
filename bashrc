@@ -39,6 +39,7 @@ alias diff='colordiff'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hc'
+alias tailf='tail -f'
 
 # Expand aliases with sudo too
 alias sudo='sudo '
