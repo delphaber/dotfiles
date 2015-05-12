@@ -1,5 +1,5 @@
 # add homebrew
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # load up rbenv
 [ -f `which rbenv` ] && eval "$(rbenv init -)"
