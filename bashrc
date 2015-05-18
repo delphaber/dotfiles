@@ -41,6 +41,7 @@ alias df='df -h'
 alias du='du -hc'
 alias tailf='tail -f'
 alias rehash='hash -r'
+alias zcat='gunzip -c'
 
 # Expand aliases with sudo too
 alias sudo='sudo '
