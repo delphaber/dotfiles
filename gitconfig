@@ -19,8 +19,8 @@
   unchange = checkout --
 
   # info
-  fame = shortlog -s --
-  last = log -1 HEAD
+  log-file = log --follow --patch --
+  fame = shortlog --summary --numbered --all --
 
   # assume-unchanged
   assume = update-index --assume-unchanged
