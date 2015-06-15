@@ -13,10 +13,6 @@
   ds = diff --staged
   re = reset
   st = status
-  ss = status --short
-
-  unstage = reset HEAD --
-  unchange = checkout --
 
   # info
   log-file = log --follow --patch --
