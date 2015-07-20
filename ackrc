@@ -23,6 +23,7 @@
 --type-set=haml=.haml
 --type-set=slim=.slim
 --type-set=jade=.jade
+--type-set=map=.map
 
 --type-set=sass=.sass
 --type-set=scss=.scss
