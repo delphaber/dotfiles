@@ -77,7 +77,7 @@
   username = Arkham
 
 [push]
-  default = matching
+  default = upstream
 
 [heroku]
   account = welaika
