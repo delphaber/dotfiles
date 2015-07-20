@@ -26,7 +26,7 @@ PROMPT_RUBY="[\$(rbenv version | sed -e 's/ .*//')]"
 PROMPT_GIT="${GREEN}\$(__git_ps1)"
 PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${BLACK}\")↳ ${GREEN}\$ ${NC}"
 
-PS1="\n${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
+PS1="${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
 ## Aliases
 alias ls="ls -hFG"
@@ -45,9 +45,9 @@ alias rs="rails server"
 alias zs="zeus start"
 alias fs="foreman start"
 #
-alias apache_start="sudo apachectl -k start"
-alias apache_stop="sudo apachectl -k graceful-stop"
-alias apache_restart="sudo apachectl -k graceful"
+alias nom="rm -rf node_modules && npm cache clean && npm install"
+alias bom="rm -rf bower_components && bower cache clean && bower install"
+alias nombom="nom && bom"
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
@@ -61,9 +61,9 @@ stty -ixon              # Disable console start/stop: makes ^S and ^Q go through
 ## Exports
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+export PROMPT_COMMAND="echo"
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
-export PATH="$PATH:$HOME/.dotfiles/bin"
 export RUBY_CONFIGURE_OPTS="--disable-install-doc"
 
 ## Colored manpages
@@ -131,8 +131,9 @@ function last_migration {
   vim `echo_last_migration $*`
 }
 
-function cs {
-  consular start $(basename $PWD)
+function tat {
+  name=$(basename `pwd`)
+  (tmux ls | grep $name) && tmux attach -t $name || tmux new-session -s $name
 }
 
 ## Some random fortune
