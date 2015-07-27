@@ -77,12 +77,7 @@ export EDITOR='/usr/local/bin/vim'
 export PAGER='most'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 
-## Bash completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
 
-source ~/.dotfiles/tmuxinator.bash
 
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
@@ -132,3 +127,14 @@ function view_coverage {
     open "$report"
   fi
 }
+
+## Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
+## Tmuxinator
+source ~/.dotfiles/tmuxinator.bash
+
+## Travis
+[ -f /Users/faber/.travis/travis.sh ] && source /Users/faber/.travis/travis.sh
