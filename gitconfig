@@ -25,6 +25,8 @@
   unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
   assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
 
+  restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+
   # log
   l  = log --oneline --decorate --graph --branches --remotes -20
   ll = log --oneline --decorate --graph --stat
