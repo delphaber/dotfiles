@@ -160,7 +160,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 ## The Fuck
-eval "$(thefuck-alias)"
+eval "$(thefuck --alias)"
 
 ## Tmuxinator
 source ~/.dotfiles/tmuxinator.bash
