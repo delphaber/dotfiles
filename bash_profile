@@ -22,4 +22,4 @@ export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 
 # load .bashrc
 source $HOME/.bashrc
-source /Users/juliu/.iterm2_shell_integration.bash
+source $HOME/.iterm2_shell_integration.bash
