@@ -6,7 +6,6 @@ DOTFILES=(
 ackrc
 bashrc
 bash_profile
-curlrc
 gemrc
 gitconfig
 gitignore_global
@@ -16,6 +15,7 @@ lftprc
 tmux.conf
 multitailrc
 agignore
+iex.exs
 )
 
 function warn() {
