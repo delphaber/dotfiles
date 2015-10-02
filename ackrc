@@ -41,6 +41,5 @@
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
---ignore-dir=public/system
 --ignore-dir=.bin
---ignore-dir=public/
+--ignore-dir=app/public/
