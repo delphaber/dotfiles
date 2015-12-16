@@ -37,7 +37,7 @@
 --type-add=css=.scss,.sass,.styl
 
 # files to ignore
---ignore-file=tags
+--ignore-file=is:tags
 
 # dirs to ignore
 --ignore-dir=log
