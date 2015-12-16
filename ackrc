@@ -36,10 +36,14 @@
 --type-add=js=.coffee,.json
 --type-add=css=.scss,.sass,.styl
 
+# files to ignore
+--ignore-file=tags
+
 # dirs to ignore
 --ignore-dir=log
 --ignore-dir=tmp
 --ignore-dir=doc
 --ignore-dir=coverage
 --ignore-dir=.bin
---ignore-dir=app/public/
+--ignore-dir=node_modules
+--ignore-dir=bower_components
