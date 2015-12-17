@@ -38,6 +38,7 @@
 
 # files to ignore
 --ignore-file=is:tags
+--ignore-file=is:gems.tags
 
 # dirs to ignore
 --ignore-dir=log
