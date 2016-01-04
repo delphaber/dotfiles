@@ -59,6 +59,7 @@ alias rubies='for file in $(ls **/.ruby-version); do echo $(cat $file) -- $file;
 alias be='bundle exec'
 alias hk='heroku'
 alias whenever_development="whenever --update-crontab --set environment='development'"
+alias vime="vim -u ${HOME}/.vim/essential.vim"
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
