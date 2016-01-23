@@ -5,6 +5,7 @@
 [alias]
   # shortcuts
   addp = add -p .
+  cop = checkout -p .
   br = branch
   bra = branch -av
   co = checkout
