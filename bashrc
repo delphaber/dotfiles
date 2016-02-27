@@ -60,6 +60,7 @@ alias be='bundle exec'
 alias hk='heroku'
 alias whenever_development="whenever --update-crontab --set environment='development'"
 alias vime="vim -u ${HOME}/.vim/essential.vim"
+alias multitail="multitail -cT ansi"
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
