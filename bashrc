@@ -132,32 +132,6 @@ function view_coverage {
   fi
 }
 
-fuckit(){
-  echo;
-  echo -n "( º_º）  ┬─┬   "; sleep .2;
-  echo -n "";
-  echo -n " ( º_º） ┬─┬   "; sleep .2;
-  echo -n "";
-  echo -n "  ( ºДº）┬─┬   "; sleep .2;
-  echo -n "";
-  echo -n "  (╯’Д’）╯︵⊏   "; sleep .1;
-  echo -n "";
-  echo -n "  (╯’□’）╯︵ ⊏  "; sleep .1;
-  echo -n "";
-  echo -n "  (╯°□°）╯︵ ┻━┻  "; sleep .1;
-  echo -n " F"; sleep .025;
-  echo -n "U"; sleep .025;
-  echo -n "C"; sleep .025;
-  echo -n "K"; sleep .025;
-  echo -n " "; sleep .025;
-  echo -n "I"; sleep .025;
-  echo -n "T"; sleep .05;
-  echo -n "! ";
-  echo;
-  echo; sleep .5;
-  return 0
-}
-
 ## Bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
