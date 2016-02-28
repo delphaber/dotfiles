@@ -54,11 +54,8 @@ alias ln='ln -i'
 alias unlink='unlink -i'
 alias rename='rename -i'
 
-alias g='git'
-alias rubies='for file in $(ls **/.ruby-version); do echo $(cat $file) -- $file; done | sort -n'
 alias be='bundle exec'
 alias hk='heroku'
-alias whenever_development="whenever --update-crontab --set environment='development'"
 alias vime="vim -u ${HOME}/.vim/essential.vim"
 alias multitail="multitail -cT ansi"
 
@@ -122,7 +119,7 @@ function echo_last_migration {
 }
 
 function last_migration {
-  vim `echo_last_migration $*`
+  vim $(echo_last_migration $*)
 }
 
 function view_coverage {
@@ -130,6 +127,16 @@ function view_coverage {
   if [ -f "$report" ]; then
     open "$report"
   fi
+}
+
+function docker_rm_all {
+  docker rm --force $(docker ps --quiet --all)
+}
+
+function rubies {
+  for file in $(ls **/.ruby-version); do
+    echo $(cat $file) -- $file;
+  done | sort -n
 }
 
 ## Bash completion
@@ -142,6 +149,3 @@ eval "$(thefuck --alias)"
 
 ## Tmuxinator
 source ~/.dotfiles/tmuxinator.bash
-
-## Travis
-[ -f /Users/faber/.travis/travis.sh ] && source /Users/faber/.travis/travis.sh
