@@ -78,8 +78,6 @@ export EDITOR='/usr/local/bin/vim'
 export PAGER='most'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 
-
-
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
     if [ -f $1 ] ; then
@@ -143,9 +141,6 @@ function rubies {
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-
-## The Fuck
-eval "$(thefuck --alias)"
 
 ## Tmuxinator
 source ~/.dotfiles/tmuxinator.bash
