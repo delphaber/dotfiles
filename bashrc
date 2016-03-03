@@ -137,10 +137,9 @@ function rubies {
   done | sort -n
 }
 
-## Bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-## Tmuxinator
 source ~/.dotfiles/tmuxinator.bash
+source `brew --prefix`/etc/profile.d/z.sh
