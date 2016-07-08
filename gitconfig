@@ -89,9 +89,9 @@
 	trustExitCode = true
 
 [pager]
-	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+	log = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
 
 [interactive]
-	diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+	diffFilter = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight
