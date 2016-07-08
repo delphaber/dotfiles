@@ -137,6 +137,14 @@ function rubies {
   done | sort -n
 }
 
+function ports {
+  lsof -i -Pn | grep -i "listen"
+}
+
+function hosts_in_lan {
+  arp -a -n | grep -v "incomplete"
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
