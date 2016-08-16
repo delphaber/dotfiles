@@ -4,7 +4,7 @@
   co = checkout
   di = diff
   dc = diff --cached
-  addp = add -p .
+  addp = add -p
   shoe = show
 
   # infos

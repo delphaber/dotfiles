@@ -65,6 +65,7 @@ export PROMPT_COMMAND="echo"
 export HISTCONTROL="ignoreboth"
 export EDITOR="/usr/local/bin/vim"
 export RUBY_CONFIGURE_OPTS="--disable-install-doc"
+export PIP_REQUIRE_VIRTUALENV=true
 
 ## Colored manpages
 export LESS_TERMCAP_mb=$'\E[01;31m'
