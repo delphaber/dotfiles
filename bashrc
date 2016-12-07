@@ -41,7 +41,7 @@ alias df='df -h'
 alias du='du -hc'
 alias tailf='tail -f'
 alias rehash='hash -r'
-alias update='brew update && brew upgrade --all && brew cleanup && brew cask cleanup'
+alias update='brew update && brew upgrade'
 
 # Expand aliases with sudo too
 alias sudo='sudo '
