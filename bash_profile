@@ -15,8 +15,11 @@ export PATH="./bin:./exe:.bundle/bin:$PATH"
 # add node_modules
 export PATH="./node_modules/.bin:$PATH"
 
+# add YARN
+export PATH="$PATH:`yarn global bin`"
+
 # add QT
-export PATH="/Users/faber/Qt5.5.1/5.5/clang_64/bin:$PATH"
+export PATH="$PATH:/Users/faber/Qt5.5.1/5.5/clang_64/bin"
 
 # load .bashrc
 source $HOME/.bashrc
