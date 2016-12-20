@@ -81,6 +81,9 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+## Direnv
+eval "$(direnv hook bash)"
+
 ## Other utilies
 # go back n directories
 function b {
