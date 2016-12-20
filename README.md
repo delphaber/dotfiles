@@ -6,7 +6,14 @@ Thanks to:
 * [Arkham](https://github.com/Arkham)
 * [pioneerskies](https://github.com/pioneerskies)
 
-## Installation:
+## Prerequisites
+
+1. Generic deps: `brew install bash-completion git multitail most colordiff tree ack`
+2. Editor: `brew install vim`
+3. Tmux: `brew install tmux reattach-to-user-namespace`
+4. Install rbenv
+
+## Installation
 
 1. Fork 
 2. Clone your fork into ".dotfiles":  
