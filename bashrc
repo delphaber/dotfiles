@@ -79,6 +79,9 @@ export EDITOR='/usr/local/bin/vim'
 export PAGER='most'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 
+## weLaika works paths
+export WORDPRESS_WORKS_PATH="$HOME/Repos"
+
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
     if [ -f $1 ] ; then
