@@ -53,10 +53,7 @@ alias nombom="nom && bom"
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
 shopt -s checkwinsize   # Check window size (rows, columns) after each command.
 shopt -s cmdhist        # Save multi-line commands in history as single line.
-shopt -s direxpand      # Allow to type partial directory names..
-shopt -s dirspell       # ..and let bash spell them out for you.
 shopt -s dotglob        # Include dotfile in path-name expansions.
-shopt -s globstar       # Enable recursive globbing with **.
 shopt -s histappend     # Append to history rather than overwrite.
 shopt -s nocaseglob     # Pathname expansion will be treated as case-insensitive.
 stty -ixon              # Disable console start/stop: makes ^S and ^Q go through
