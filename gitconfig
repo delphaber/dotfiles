@@ -87,11 +87,3 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-
-[pager]
-	log = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
-	show = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
-	diff = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight | less
-
-[interactive]
-	diffFilter = `brew --prefix`/share/git-core/contrib/diff-highlight/diff-highlight
