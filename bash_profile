@@ -21,6 +21,9 @@ export PATH="$PATH:`yarn global bin`"
 # add QT
 export PATH="$PATH:/Users/faber/Qt5.5.1/5.5/clang_64/bin"
 
+# add ImageMagick
+export PATH="$PATH:/usr/local/opt/imagemagick@6/bin"
+
 # load .bashrc
 source $HOME/.bashrc
 
