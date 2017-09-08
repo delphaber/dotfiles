@@ -24,6 +24,9 @@ export PATH="$PATH:/Users/faber/Qt5.5.1/5.5/clang_64/bin"
 # add ImageMagick
 export PATH="$PATH:/usr/local/opt/imagemagick@6/bin"
 
+# add sqlite from homebrew
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
 # load .bashrc
 source $HOME/.bashrc
 
