@@ -27,6 +27,9 @@ export PATH="$PATH:/usr/local/opt/imagemagick@6/bin"
 # add sqlite from homebrew
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
+# erlang
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 # load .bashrc
 source $HOME/.bashrc
 
