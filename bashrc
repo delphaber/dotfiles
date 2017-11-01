@@ -162,3 +162,4 @@ fi
 
 source ~/.dotfiles/tmuxinator.bash
 source `brew --prefix`/etc/profile.d/z.sh
+

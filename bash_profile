@@ -23,19 +23,18 @@ export PATH="./node_modules/.bin:$PATH"
 # add YARN
 export PATH="$PATH:`yarn global bin`"
 
-# add QT
-export PATH="$PATH:/Users/faber/Qt5.5.1/5.5/clang_64/bin"
-
-# add ImageMagick
-export PATH="$PATH:/usr/local/opt/imagemagick@6/bin"
-
-# add sqlite from homebrew
+# add kegonly paths
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 # load .bashrc
 source $HOME/.bashrc
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
