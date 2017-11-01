@@ -4,6 +4,7 @@ DOTFILES_DIR=".dotfiles"
 BACKUP_DIR="backup"
 DOTFILES=(
 ackrc
+aprc
 bashrc
 bash_profile
 gemrc
