@@ -9,7 +9,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # load up rbenv
 [ -f `which rbenv` ] && eval "$(rbenv init -)"
 
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -28,13 +27,13 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# load iterm2 integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
 # load .bashrc
 source $HOME/.bashrc
-export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
