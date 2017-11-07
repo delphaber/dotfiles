@@ -85,6 +85,8 @@ export HISTCONTROL='ignoreboth'
 export EDITOR='/usr/local/bin/vim'
 export PAGER='most'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 ## weLaika works paths
 export WORDPRESS_WORKS_PATH="$HOME/Repos"
@@ -162,3 +164,5 @@ fi
 
 source ~/.dotfiles/tmuxinator.bash
 source `brew --prefix`/etc/profile.d/z.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
