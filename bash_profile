@@ -23,11 +23,12 @@ export PATH="./node_modules/.bin:$PATH"
 export PATH="$PATH:`yarn global bin`"
 
 # add kegonly paths
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/mysql@5.5/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
