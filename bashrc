@@ -28,6 +28,15 @@ PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${white}\")↳ $
 
 PS1="${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
+## Colored manpages
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 ## Aliases
 
 alias ls='ls -hFG'
@@ -83,7 +92,7 @@ export HISTCONTROL='ignoreboth'
 
 ## Other exports
 export EDITOR='/usr/local/bin/vim'
-export PAGER='most'
+export PAGER='less'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
