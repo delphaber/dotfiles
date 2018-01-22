@@ -150,6 +150,14 @@ function view_coverage {
   fi
 }
 
+function view_critics {
+  report='tmp/rubycritic/overview.html'
+  if [ -f "$report" ]; then
+    open "$report"
+  fi
+}
+
+
 function docker_rm_all {
   docker rm --force $(docker ps --quiet --all)
 }
