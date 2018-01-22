@@ -96,6 +96,7 @@ export PAGER='less'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export LESS='-R'
 
 ## weLaika works paths
 export WORDPRESS_WORKS_PATH="$HOME/Repos"
