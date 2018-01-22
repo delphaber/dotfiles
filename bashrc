@@ -99,6 +99,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 ## weLaika works paths
 export WORDPRESS_WORKS_PATH="$HOME/Repos"
+export SMALLPAY_DEV_ROOT="$HOME/Repos/spay"
 
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
