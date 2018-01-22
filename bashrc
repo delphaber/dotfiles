@@ -91,7 +91,7 @@ export HISTFILESIZE=10000
 export HISTCONTROL='ignoreboth'
 
 ## Other exports
-export EDITOR='/usr/local/bin/vim'
+export EDITOR='/usr/local/bin/nvim'
 export PAGER='less'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
 export FZF_DEFAULT_COMMAND='ag -g ""'
