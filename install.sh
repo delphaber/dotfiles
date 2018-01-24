@@ -11,6 +11,7 @@ gemrc
 gitconfig
 gitignore_global
 inputrc
+irbrc
 pryrc
 lftprc
 tmux.conf
