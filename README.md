@@ -8,17 +8,17 @@ Thanks to:
 
 ## Prerequisites
 
-1. Generic deps: `brew install bash-completion git multitail most colordiff tree ack`
-2. Editor: `brew install vim`
+1. Generic deps: `brew install bash-completion git multitail most colordiff tree ack moreutils the_silver_searcher watch wget curl`
+2. Editor: `brew install neovim`
 3. Tmux: `brew install tmux reattach-to-user-namespace`
 4. Install rbenv
 
 ## Installation
 
 1. Fork 
-2. Clone your fork into ".dotfiles":  
+2. Clone your fork into ".dotfiles":
    `git clone https://github.com/YOURNAME/dotfiles.git ~/.dotfiles`
-3. Install:  
+3. Install:
    `cd ~/.dotfiles && bash install.sh`
 4. Update `[user]` section in `gitconfig` file
 5. Edit to suit your needs
