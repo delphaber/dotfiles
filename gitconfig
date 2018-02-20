@@ -90,3 +90,5 @@
 
 [commit]
 	template = /Users/faber/.stCommitMsg
+[bulkworkspaces]
+	spay = /Users/faber/Repos/spay
