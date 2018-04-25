@@ -56,7 +56,12 @@ alias npm_update='npm install npm@latest -g'
 alias remove_all_gems='for i in `gem list --no-versions`; do gem uninstall -aIx $i; done'
 alias rake_db_recreate='rake db:drop db:create db:migrate db:test:prepare db:seed'
 alias recent='ls -Art | tail -n 10'
+alias be='bundle exec'
 alias only_failures='bundle exec rspec spec/ --only-failures'
+alias spec='bundle exec rspec spec/'
+alias hk='heroku'
+alias vime="vim -u ${HOME}/.vim/essential.vim"
+# alias multitail="multitail -cT ansi"
 
 # Expand aliases with sudo too
 alias sudo='sudo '
@@ -69,10 +74,6 @@ alias ln='ln -i'
 alias unlink='unlink -i'
 alias rename='rename -i'
 
-alias be='bundle exec'
-alias hk='heroku'
-alias vime="vim -u ${HOME}/.vim/essential.vim"
-alias multitail="multitail -cT ansi"
 
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
