@@ -40,6 +40,9 @@
 	# tag
 	lasttag = describe --tags --abbrev=0
 
+  # safety alias
+  pushf = push --force-with-lease
+
 [color]
 	ui = auto
 
