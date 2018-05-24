@@ -103,6 +103,7 @@ export LESS='-R'
 ## weLaika works paths
 export WORDPRESS_WORKS_PATH="$HOME/Repos"
 export SMALLPAY_DEV_ROOT="$HOME/Repos/spay"
+export CFP_DEV_ROOT="$HOME/Repos/cfp"
 
 ## Extract files: depends on zip, unrar and p7zip
 function ex {
