@@ -180,6 +180,10 @@ function hosts_in_lan {
   arp -a -n | grep -v "incomplete"
 }
 
+function postgres_delete_pid {
+  rm /usr/local/var/postgresql@9.6/postmaster.pid
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
