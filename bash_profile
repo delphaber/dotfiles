@@ -36,6 +36,9 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# saneness
+export DISABLE_SPRING=1
+
 # load iterm2 integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
