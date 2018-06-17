@@ -93,5 +93,7 @@
 
 [commit]
 	template = /Users/faber/.stCommitMsg
+
 [bulkworkspaces]
 	spay = /Users/faber/Repos/spay
+	cfp = /Users/faber/Repos/cfp
