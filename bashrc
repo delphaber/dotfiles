@@ -167,7 +167,7 @@ function docker_rm_all {
 }
 
 function rubies {
-  for file in $(ls **/.ruby-version); do
+  for file in $(find . -type f -maxdepth 3 -name '.ruby-version'); do
     echo $(cat $file) -- $file;
   done | sort -n
 }
