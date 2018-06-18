@@ -36,6 +36,19 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# android
+export ANT_HOME="/usr/local/opt/ant"
+export MAVEN_HOME="/usr/local/opt/maven"
+export GRADLE_HOME="/usr/local/opt/gradle"
+export ANDROID_HOME="/usr/local/share/android-sdk"
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
+export PATH="$ANT_HOME/bin:$PATH"
+export PATH="$MAVEN_HOME/bin:$PATH"
+export PATH="$GRADLE_HOME/bin:$PATH"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
 # saneness
 export DISABLE_SPRING=1
 
