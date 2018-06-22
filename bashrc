@@ -61,6 +61,8 @@ alias only_failures='bundle exec rspec spec/ --only-failures'
 alias spec='bundle exec rspec spec/'
 alias hk='heroku'
 alias vime="vim -u ${HOME}/.vim/essential.vim"
+alias dc='docker-compose'
+alias d='docker'
 # alias multitail="multitail -cT ansi"
 
 # Expand aliases with sudo too
