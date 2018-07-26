@@ -195,3 +195,7 @@ source ~/.dotfiles/tmuxinator.bash
 source `brew --prefix`/etc/profile.d/z.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# heroku autocomplete setup
+# run `heroku autocomplete`
+HEROKU_AC_BASH_SETUP_PATH=/Users/faber/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
