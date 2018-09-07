@@ -24,7 +24,7 @@ function is_vim_running {
 PROMPT_INFO="${white}[\A] ${green}\u${NC} ${blue}\w"
 PROMPT_RUBY="[\$(rbenv version-name)]"
 PROMPT_GIT="${green}\$(__git_ps1)"
-PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${white}\")↳ ${green}\$ ${NC}"
+PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${white}\") ↳ ${green}\$ ${NC}"
 
 PS1="${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
@@ -133,11 +133,6 @@ function ex {
 function ltree()
 {
     tree -C $* | less -R
-}
-
-# mkdir && cd
-function mcd {
-  mkdir -p "$1" && cd "$1";
 }
 
 function echo_last_migration {
