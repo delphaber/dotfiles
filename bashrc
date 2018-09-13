@@ -182,6 +182,12 @@ function postgres_delete_pid {
   rm /usr/local/var/postgresql@9.6/postmaster.pid
 }
 
+function code_socks5_proxy {
+  # Use firefox with SOCKS5
+  # To stop the proxy, `pkill ssh`
+  ssh -f -C -N -D 0.0.0.0:3128 code
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
