@@ -63,6 +63,7 @@ alias hk='heroku'
 alias vime="vim -u ${HOME}/.vim/essential.vim"
 alias dc='docker-compose'
 alias d='docker'
+alias vim='nvim'
 # alias multitail="multitail -cT ansi"
 
 # Expand aliases with sudo too
@@ -142,7 +143,7 @@ function echo_last_migration {
 }
 
 function last_migration {
-  vim $(echo_last_migration $*)
+  nvim $(echo_last_migration $*)
 }
 
 function view_coverage {
