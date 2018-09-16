@@ -80,8 +80,8 @@
 
 [core]
   excludesfile = /Users/faber/.gitignore_global
-  editor = vim
-  pager = less -r
+  editor = nvim
+  pager = less -R
 
 [diff]
   tool = vimdiff
