@@ -1,99 +1,115 @@
 [user]
-	name = Fabrizio Monti
-	email = fabrizio.monti@welaika.com
+  name = Fabrizio Monti
+  email = fabrizio.monti@welaika.com
 
 [alias]
-	# shortcuts
-	addp = add -p .
-	cop = checkout -p .
-	br = branch
-	bra = branch -av
-	co = checkout
-	ci = commit
-	di = diff
-	ds = diff --staged
-	re = reset
-	st = status
+  # shortcuts
+  addp = add -p .
+  cop = checkout -p .
+  br = branch
+  bra = branch -av
+  co = checkout
+  ci = commit
+  di = diff
+  ds = diff --staged
+  re = reset
+  st = status
 
-	# info
-	log-file = log --follow --patch --
-	fame = shortlog --summary --numbered --all --
+  # info
+  log-file = log --follow --patch --
+  fame = shortlog --summary --numbered --all --
 
-	# assume-unchanged
-	assume = update-index --assume-unchanged
-	unassume = update-index --no-assume-unchanged
-	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
-	unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
-	assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+  # assume-unchanged
+  assume = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+  unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+  assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
 
-	restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+  restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
 
-	# log
-	l  = log --oneline --decorate --graph --branches --remotes -40
-	ll = log --oneline --decorate --graph --stat
-	ls = log --oneline --decorate --graph --branches --remotes --simplify-by-decoration -40
-	t  = log --oneline --decorate --graph --branches --remotes -40 --pretty=format:'%C(yellow)%h%C(red bold)%d %Creset%s %C(green)(%ar) %C(cyan)<%cn>' --date=relative
+  # log
+  l  = log --oneline --decorate --graph --branches --remotes -40
+  ll = log --oneline --decorate --graph --stat
+  ls = log --oneline --decorate --graph --branches --remotes --simplify-by-decoration -40
+  t  = log --oneline --decorate --graph --branches --remotes -40 --pretty=format:'%C(yellow)%h%C(red bold)%d %Creset%s %C(green)(%ar) %C(cyan)<%cn>' --date=relative
 
-	# list aliases
-	al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  # list aliases
+  al = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
 
-	# tag
-	lasttag = describe --tags --abbrev=0
+  # tag
+  lasttag = describe --tags --abbrev=0
 
   # safety alias
   pushf = push --force-with-lease
 
+  # Find branches containing commit
+  fb = "!f() { git branch -a --contains $1; }; f"
+
+  # Find tags containing commit
+  ft = "!f() { git describe --always --contains $1; }; f"
+
+  # Find commits by source code
+  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+  # Remove branches that have already been merged with master
+  # a.k.a. ‘delete merged’
+  # dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
 [color]
-	ui = auto
+  ui = auto
 
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+  current = yellow reverse
+  local = yellow
+  remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
 
 [color "status"]
-	added = green
-	changed = yellow
-	untracked = red
+  added = green
+  changed = yellow
+  untracked = red
 
 [core]
-	excludesfile = /Users/faber/.gitignore_global
-	editor = vim
-	pager = less -r
+  excludesfile = /Users/faber/.gitignore_global
+  editor = vim
+  pager = less -r
 
 [diff]
-	tool = vimdiff
-	compactionHeuristic = 1
+  tool = vimdiff
+  compactionHeuristic = 1
 
 [pull]
-	rebase = true
+  rebase = true
 
 [push]
-	default = current
+  default = current
 
 [rebase]
-	autostash = true
+  autostash = true
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 
 [commit]
-	template = /Users/faber/.stCommitMsg
+  template = /Users/faber/.stCommitMsg
 
 [bulkworkspaces]
-	spay = /Users/faber/Repos/spay
-	cfp = /Users/faber/Repos/cfp
+  spay = /Users/faber/Repos/spay
+  cfp = /Users/faber/Repos/cfp
