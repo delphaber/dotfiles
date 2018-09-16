@@ -110,92 +110,14 @@ export WORDPRESS_WORKS_PATH="$HOME/Repos"
 export SMALLPAY_DEV_ROOT="$HOME/Repos/spay"
 export CFP_DEV_ROOT="$HOME/Repos/cfp"
 
-## Extract files: depends on zip, unrar and p7zip
-function ex {
-    if [ -f $1 ] ; then
-      case $1 in
-        *.tar.bz2)   tar xjf $1     ;;
-        *.tar.gz)    tar xzf $1     ;;
-        *.bz2)       bunzip2 $1     ;;
-        *.rar)       unrar e $1     ;;
-        *.gz)        gunzip $1      ;;
-        *.tar)       tar xf $1      ;;
-        *.tbz2)      tar xjf $1     ;;
-        *.tgz)       tar xzf $1     ;;
-        *.zip)       unzip $1       ;;
-        *.Z)         uncompress $1  ;;
-        *.7z)        7z x $1        ;;
-        *)     echo "'$1' cannot be extracted via ex()" ;;
-         esac
-     else
-         echo "'$1' is not a valid file"
-     fi
-}
-
-function ltree()
-{
-    tree -C $* | less -R
-}
-
-function echo_last_migration {
-  migrate_path='db/migrate/'
-  nth_migration=$((${1:-0}+1))
-  echo "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
-}
-
-function last_migration {
-  nvim $(echo_last_migration $*)
-}
-
-function view_coverage {
-  report='coverage/index.html'
-  if [ -f "$report" ]; then
-    open "$report"
-  fi
-}
-
-function view_critics {
-  report='tmp/rubycritic/overview.html'
-  if [ -f "$report" ]; then
-    open "$report"
-  fi
-}
-
-
-function docker_rm_all {
-  docker rm --force $(docker ps --quiet --all)
-}
-
-function rubies {
-  for file in $(find . -type f -maxdepth 3 -name '.ruby-version'); do
-    echo $(cat $file) -- $file;
-  done | sort -n
-}
-
-function ports {
-  lsof -i -Pn | grep -i "listen"
-}
-
-function hosts_in_lan {
-  arp -a -n | grep -v "incomplete"
-}
-
-function postgres_delete_pid {
-  rm /usr/local/var/postgresql@9.6/postmaster.pid
-}
-
-function code_socks5_proxy {
-  # Use firefox with SOCKS5
-  # To stop the proxy, `pkill ssh`
-  ssh -f -C -N -D 0.0.0.0:3128 code
-}
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
 source ~/.dotfiles/tmuxinator.bash
 source `brew --prefix`/etc/profile.d/z.sh
+
+[ -f ./functions ] && source ./functions
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
