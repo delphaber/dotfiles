@@ -117,7 +117,7 @@ fi
 source ~/.dotfiles/tmuxinator.bash
 source `brew --prefix`/etc/profile.d/z.sh
 
-[ -f ./functions ] && source ./functions
+[ -f ~/.dotfiles/functions ] && source ~/.dotfiles/functions
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
