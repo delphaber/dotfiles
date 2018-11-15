@@ -93,3 +93,7 @@ function code_socks5_proxy {
 function myip {
   dig +short myip.opendns.com @resolver1.opendns.com
 }
+
+function find_and_destroy_logs {
+  find . -maxdepth 4 -type f -path '*/log/*' -name '*.log' -print0 | xargs -0 rm
+}
