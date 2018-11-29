@@ -55,9 +55,11 @@
   # Find commits by commit message
   fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
-  # Remove branches that have already been merged with master
-  # a.k.a. ‘delete merged’
-  # dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  # Output default branch name (ex. master)
+  default-branch="!git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'"
+
+  # Remove all local merged branches, excluding current branch (^*) and other names, e.g. master or dev
+  remove-local-branches="!git branch --no-color --merged master | egrep -v '^\\*|master|dev' | xargs git branch -d"
 
 [color]
   ui = auto
