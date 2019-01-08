@@ -21,7 +21,7 @@ function is_vim_running {
   jobs | grep -o 'vim' &> /dev/null
 }
 
-PROMPT_INFO="${white}[\A] ${green}\u${NC} ${blue}\w"
+PROMPT_INFO="${white}[\A] ${green}\u@\h:${blue}\w"
 PROMPT_RUBY="[\$(rbenv version-name)]"
 PROMPT_GIT="${green}\$(__git_ps1)"
 PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${white}\") ↳ ${green}\$ ${NC}"
