@@ -107,3 +107,5 @@
 [bulkworkspaces]
   spay = /Users/faber/Repos/spay
   cfp = /Users/faber/Repos/cfp
+  repos = /Users/faber/Repos
+  unicorns = /Users/faber/Unicorns
