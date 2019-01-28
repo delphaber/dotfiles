@@ -23,6 +23,7 @@ Thanks to:
 6. Install [nvm](https://github.com/creationix/nvm#install-script)
 7. Install [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable): `brew install yarn --without-node`
 8. Install [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
+9. Install [fzf](https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew)
 
 ## Installation
 
