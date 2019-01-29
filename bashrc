@@ -65,6 +65,7 @@ alias dc='docker-compose'
 alias d='docker'
 alias vim='nvim'
 # alias multitail="multitail -cT ansi"
+alias stellare='stellar'
 
 # Expand aliases with sudo too
 alias sudo='sudo '
