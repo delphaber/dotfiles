@@ -44,7 +44,7 @@ function echo_last_migration {
 }
 
 function last_migration {
-  nvim $(echo_last_migration $*)
+  code $(echo_last_migration $*)
 }
 
 function view_coverage {
@@ -96,4 +96,9 @@ function myip {
 
 function find_and_destroy_logs {
   find . -maxdepth 4 -type f -path '*/log/*' -name '*.log' -print0 | xargs -0 rm
+}
+
+function vscode_install_dependencies {
+  gem install solargraph ruby-debug-ide byebug rubocop
+  # gem install debase
 }
