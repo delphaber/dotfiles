@@ -35,6 +35,7 @@
 # files to ignore
 --ignore-file=is:gems.tags
 --ignore-file=is:tags
+--ignore-file=ext:sql
 
 # dirs to ignore
 --ignore-dir=.bin
