@@ -18,6 +18,7 @@ tmux.conf
 multitailrc
 agignore
 iex.exs
+ansible.cfg
 )
 
 function warn() {
