@@ -103,6 +103,10 @@ function vscode_install_dependencies {
   # gem install debase
 }
 
+function ansible_log {
+  nvim /usr/local/var/log/ansible.log
+}
+
 function recent {
   LIMIT="${1:-15}"
   ls -lArt | tail -n "$LIMIT"
