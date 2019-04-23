@@ -102,3 +102,8 @@ function vscode_install_dependencies {
   gem install solargraph ruby-debug-ide byebug rubocop
   # gem install debase
 }
+
+function recent {
+  LIMIT="${1:-15}"
+  ls -lArt | tail -n "$LIMIT"
+}

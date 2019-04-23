@@ -55,7 +55,6 @@ alias update='brew update && brew upgrade && brew cleanup && heroku autocomplete
 alias npm_update='npm install npm@latest -g'
 alias remove_all_gems='for i in `gem list --no-versions`; do gem uninstall -aIx $i; done'
 alias rake_db_recreate='rake db:drop db:create db:migrate db:test:prepare db:seed'
-alias recent='ls -Art | tail -n 10'
 alias be='bundle exec'
 alias only_failures='bundle exec rspec spec/ --only-failures'
 alias spec='bundle exec rspec spec/'
