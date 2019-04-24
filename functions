@@ -111,3 +111,7 @@ function recent {
   LIMIT="${1:-15}"
   ls -lArt | tail -n "$LIMIT"
 }
+
+function http_server {
+  python3 -m http.server --bind 127.0.0.1
+}
