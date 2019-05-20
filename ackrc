@@ -46,4 +46,5 @@
 --ignore-dir=log
 --ignore-dir=node_modules
 --ignore-dir=public/assets
+--ignore-dir=public/packs
 --ignore-dir=tmp
