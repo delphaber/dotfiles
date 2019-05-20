@@ -90,6 +90,12 @@ function code_socks5_proxy {
   ssh -f -C -N -D 0.0.0.0:3128 code
 }
 
+function camar_socks5_proxy {
+  # Use firefox with SOCKS5
+  # To stop the proxy, `pkill ssh`
+  ssh -f -C -N -D 0.0.0.0:3129 camar-redmine-production
+}
+
 function myip {
   dig +short myip.opendns.com @resolver1.opendns.com
 }
