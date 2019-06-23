@@ -109,3 +109,5 @@
   cfp = /Users/faber/Repos/cfp
   repos = /Users/faber/Repos
   unicorns = /Users/faber/Unicorns
+[merge]
+	tool = code
