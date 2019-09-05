@@ -36,6 +36,10 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 
+# android
+export ANDROID_SDK_ROOT="/Users/$(whoami)/Library/Android/sdk"
+export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
+
 # load iterm2 integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
