@@ -1,5 +1,7 @@
 IRB.conf[:SAVE_HISTORY] = 200
-IRB.conf[:HISTORY_FILE] = '~/.irb-history'
+IRB.conf[:HISTORY_FILE] = File.join(ENV["HOME"], ".irb-history")
+
+require 'irb/completion' rescue nil
 
 begin
   require 'awesome_print'
