@@ -8,22 +8,23 @@ Thanks to:
 
 ## Prerequisites
 
-1. Install [brew](https://brew.sh/)
-2. Generic deps: `brew install bash-completion git multitail most colordiff tree ack moreutils the_silver_searcher watch wget curl z`
-3. Editor: `brew install neovim` and vimfiles
-4. Tmux: `brew install tmux reattach-to-user-namespace`
-5. Bash
-    ```bash
-    brew install bash
-    echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-    chsh -s /usr/local/bin/bash
-    # restart iterm and test
-    echo $BASH_VERSION # 5.0.2(1)-release
-    ```
-6. Install [nvm](https://github.com/creationix/nvm#install-script)
-7. Install [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable): `brew install yarn --without-node`
-8. Install [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
-9. Install [fzf](https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew)
+ 1. Install [brew](https://brew.sh/)
+ 2. Generic deps: `brew install bash-completion git multitail most colordiff tree ack moreutils the_silver_searcher watch wget curl z`
+ 3. Editor: `brew install neovim` and vimfiles
+ 4. Tmux: `brew install tmux reattach-to-user-namespace`
+ 5. Bash
+      ```bash
+      brew install bash
+      echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+      chsh -s /usr/local/bin/bash
+      # restart iterm and test
+      echo $BASH_VERSION # 5.0.2(1)-release
+      ```
+ 6. Install [nvm](https://github.com/creationix/nvm#install-script)
+ 7. Install [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable): `brew install yarn --without-node`
+ 8. Install [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
+ 9. Install [fzf](https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew)
+10. Install [pspg](https://github.com/okbob/pspg)
 
 ## Installation
 
