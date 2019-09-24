@@ -131,3 +131,7 @@ function remove_all_gems {
 function find_vagrant_folders {
   find . -type d -name '.vagrant' -maxdepth 3
 }
+
+function clear_dns_cache {
+  sudo killall -HUP mDNSResponder; sudo killall mDNSResponderHelper; sudo dscacheutil -flushcache
+}
