@@ -135,3 +135,7 @@ function find_vagrant_folders {
 function clear_dns_cache {
   sudo killall -HUP mDNSResponder; sudo killall mDNSResponderHelper; sudo dscacheutil -flushcache
 }
+
+function redis-clean {
+  redis-cli flushall
+}
