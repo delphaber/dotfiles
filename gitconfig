@@ -86,7 +86,7 @@
   pager = less -R
 
 [diff]
-  tool = vimdiff
+  tool = code
   compactionHeuristic = 1
 
 [pull]
@@ -101,13 +101,9 @@
 [credential]
   helper = osxkeychain
 
-[commit]
-  template = /Users/faber/.stCommitMsg
-
 [bulkworkspaces]
-  spay = /Users/faber/Repos/spay
-  cfp = /Users/faber/Repos/cfp
   repos = /Users/faber/Repos
   unicorns = /Users/faber/Unicorns
+
 [merge]
-	tool = code
+  tool = code
