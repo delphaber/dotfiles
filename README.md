@@ -25,6 +25,7 @@ Thanks to:
  8. Install [rbenv](https://github.com/rbenv/rbenv#homebrew-on-macos)
  9. Install [fzf](https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew)
 10. Install [pspg](https://github.com/okbob/pspg)
+11. Install [heroku](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
 ## Installation
 
