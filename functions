@@ -81,7 +81,7 @@ function hosts_in_lan {
 }
 
 function postgres_delete_pid {
-  rm /usr/local/var/postgresql@10/postmaster.pid
+  rm /usr/local/var/postgresql@11/postmaster.pid
 }
 
 function code_socks5_proxy {
