@@ -30,7 +30,7 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-export PATH="/usr/local/opt/redis@4.0/bin:$PATH"
+export PATH="/usr/local/opt/redis@5.0/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 # erlang
@@ -39,6 +39,9 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # android
 export ANDROID_SDK_ROOT="/Users/$(whoami)/Library/Android/sdk"
 export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
+
+# ruby-build rbenv
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # load iterm2 integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
