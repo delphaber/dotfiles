@@ -61,6 +61,7 @@ alias vime="vim -u ${HOME}/.vim/essential.vim"
 alias d='docker'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
+alias dr='docker run --rm -it'
 alias vim='nvim'
 # alias multitail="multitail -cT ansi"
 alias stellare='stellar'
