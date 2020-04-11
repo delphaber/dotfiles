@@ -150,3 +150,7 @@ function docker-start {
     echo "Docker is up and running."
   fi
 }
+
+function extract_sdi_invoice {
+  openssl smime -verify -noverify -in $1 -inform DER -out $(basename $1 '.p7m')
+}
