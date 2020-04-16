@@ -9,7 +9,7 @@ Thanks to:
 ## Prerequisites
 
  1. Install [brew](https://brew.sh/)
- 2. Generic deps: `brew install bash-completion git multitail most colordiff tree ack moreutils the_silver_searcher watch wget curl z`
+ 2. Generic deps: `brew install bash-completion git git-extras multitail most colordiff tree ack moreutils the_silver_searcher watch wget curl z`
  3. Editor: `brew install neovim` and vimfiles
  4. Tmux: `brew install tmux reattach-to-user-namespace`
  5. Bash
