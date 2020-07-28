@@ -32,6 +32,7 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 export PATH="/usr/local/opt/redis@5.0/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
 
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
