@@ -78,7 +78,6 @@ alias ln='ln -i'
 alias unlink='unlink -i'
 alias rename='rename -i'
 
-
 ## Shopt options
 shopt -s cdspell        # This will correct minor spelling errors in cd command.
 shopt -s checkwinsize   # Check window size (rows, columns) after each command.
@@ -105,11 +104,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 # export LESS='-R'
 # export DISABLE_SPRING='1'
-
-## weLaika works paths
-export WORDPRESS_WORKS_PATH="$HOME/Repos"
-export SMALLPAY_DEV_ROOT="$HOME/Repos/spay"
-export CFP_DEV_ROOT="$HOME/Repos/cfp"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
