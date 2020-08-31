@@ -23,7 +23,7 @@ export PATH="./bin:./exe:.bundle/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 
 # add YARN
-export PATH="$PATH:`yarn global bin`"
+export PATH="$(yarn global bin):$PATH"
 
 # add kegonly paths
 export PATH="/usr/local/opt/curl/bin:$PATH"
