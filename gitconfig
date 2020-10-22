@@ -86,6 +86,7 @@
   excludesfile = /Users/faber/.gitignore_global
   editor = nvim
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	attributesfile = /Users/faber/.gitattributes
 
 [diff]
   tool = code

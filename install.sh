@@ -10,6 +10,7 @@ bash_profile
 gemrc
 gitconfig
 gitignore_global
+gitattributes
 inputrc
 irbrc
 pryrc
