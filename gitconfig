@@ -61,8 +61,10 @@
   # Remove all local merged branches, excluding current branch (^*) and other names, e.g. master or dev
   remove-local-branches="!git branch --no-color --merged master | egrep -v '^\\*|master|dev' | xargs git branch -d"
 
+  showtool = "!showci () { rev=${1:-HEAD}; git difftool $rev~1 $rev; }; showci $1"
+
 [color]
-	ui = true
+  ui = true
 
 [color "branch"]
   current = yellow reverse
@@ -70,12 +72,12 @@
   remote = green
 
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	commit = yellow bold
-	whitespace = red reverse
+  meta = 11
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  commit = yellow bold
+  whitespace = red reverse
 
 [color "status"]
   added = green
@@ -85,11 +87,11 @@
 [core]
   excludesfile = /Users/faber/.gitignore_global
   editor = nvim
-	pager = diff-so-fancy | less --tabs=4 -RFX
-	attributesfile = /Users/faber/.gitattributes
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  attributesfile = /Users/faber/.gitattributes
 
 [diff]
-  tool = code
+	tool = Kaleidoscope
   compactionHeuristic = 1
 
 [pull]
@@ -105,9 +107,26 @@
   helper = osxkeychain
 
 [merge]
-  tool = code
+	tool = Kaleidoscope
+
+[bulkworkspaces]
+  dato = /Users/faber/Repos/dato/main
+
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+	prompt = false
+
+[mergetool]
+	prompt = false
