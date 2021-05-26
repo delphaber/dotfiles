@@ -64,7 +64,7 @@
   showtool = "!showci () { rev=${1:-HEAD}; git difftool $rev~1 $rev; }; showci $1"
 
 [color]
-  ui = true
+	ui = true
 
 [color "branch"]
   current = yellow reverse
@@ -72,12 +72,13 @@
   remote = green
 
 [color "diff"]
-  meta = 11
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  commit = yellow bold
-  whitespace = red reverse
+	meta = 11
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	commit = yellow bold
+	whitespace = red reverse
+	func = 146 bold
 
 [color "status"]
   added = green
@@ -113,10 +114,10 @@
   dato = /Users/faber/Repos/dato/main
 
 [color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 22
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
