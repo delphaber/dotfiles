@@ -104,6 +104,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export LESS='-R'
 # export DISABLE_SPRING='1'
+export PSQL_PAGER="pspg"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
