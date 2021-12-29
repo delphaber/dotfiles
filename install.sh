@@ -7,6 +7,7 @@ ackrc
 aprc
 bashrc
 bash_profile
+curlrc
 gemrc
 gitconfig
 gitignore_global
