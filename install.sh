@@ -4,23 +4,23 @@ DOTFILES_DIR=".dotfiles"
 BACKUP_DIR="backup"
 DOTFILES=(
 ackrc
+agignore
 aprc
-bashrc
 bash_profile
+bashrc
 curlrc
 gemrc
+gitattributes
 gitconfig
 gitignore_global
-gitattributes
+iex.exs
 inputrc
 irbrc
-pryrc
 lftprc
-tmux.conf
 multitailrc
-agignore
-iex.exs
+pryrc
 psqlrc
+tmux.conf
 )
 
 function warn() {
