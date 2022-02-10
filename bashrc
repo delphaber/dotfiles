@@ -113,6 +113,8 @@ fi
 source ~/.dotfiles/tmuxinator.bash
 source `brew --prefix`/etc/profile.d/z.sh
 source ~/.config/broot/launcher/bash/br
+source "$HOME/.cargo/env"
+
 
 [ -f ~/.dotfiles/functions ] && source ~/.dotfiles/functions
 
