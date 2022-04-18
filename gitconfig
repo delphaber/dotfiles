@@ -64,21 +64,12 @@
   showtool = "!showci () { rev=${1:-HEAD}; git difftool $rev~1 $rev; }; showci $1"
 
 [color]
-	ui = true
+  ui = true
 
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
-
-[color "diff"]
-	meta = 11
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	commit = yellow bold
-	whitespace = red reverse
-	func = 146 bold
 
 [color "status"]
   added = green
@@ -86,14 +77,13 @@
   untracked = red
 
 [core]
-  excludesfile = /Users/faber/.gitignore_global
-  editor = nvim
-	pager = diff-so-fancy | less --tabs=4 -RFX
   attributesfile = /Users/faber/.gitattributes
+  editor = nvim
+  excludesfile = /Users/faber/.gitignore_global
+  pager = delta
 
 [diff]
-	tool = Kaleidoscope
-  compactionHeuristic = 1
+  colorMoved = default
 
 [pull]
   rebase = true
@@ -108,28 +98,14 @@
   helper = osxkeychain
 
 [merge]
-	tool = Kaleidoscope
+  conflictstyle = diff3
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true # use n and N to move between diff sections
+  line-numbers = true
 
 [bulkworkspaces]
   dato = /Users/faber/Repos/dato/main
-
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
-
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
-[difftool]
-	prompt = false
-
-[mergetool]
-	prompt = false
-[interactive]
-	diffFilter = diff-so-fancy --patch

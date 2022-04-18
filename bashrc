@@ -28,16 +28,6 @@ PROMPT_FOOTER="\n\$(is_vim_running && echo \"${red}\" || echo \"${white}\") ↳ 
 
 PS1="${PROMPT_INFO} ${PROMPT_RUBY}${PROMPT_GIT} ${PROMPT_FOOTER}"
 
-## Colored manpages
-# export LESS_TERMCAP_mb=$'\E[01;31m'
-# export LESS_TERMCAP_md=$'\E[01;31m'
-# export LESS_TERMCAP_me=$'\E[0m'
-# export LESS_TERMCAP_se=$'\E[0m'
-# export LESS_TERMCAP_so=$'\E[01;44;33m'
-# export LESS_TERMCAP_ue=$'\E[0m'
-# export LESS_TERMCAP_us=$'\E[01;32m'
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
 ## Aliases
 
 alias ls='ls -hFG'
@@ -45,26 +35,21 @@ alias la='ls -lhAFG'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias diff='colordiff'
 alias mkdir='mkdir -p'
 alias df='df -h'
 alias du='du -hc'
-alias tree='tree -aAC'
 alias tailf='tail -f'
 alias rehash='hash -r'
 alias update='brew update && brew upgrade && brew cleanup && heroku autocomplete --refresh-cache'
 alias npm_update='npm install npm@latest -g'
-alias be='bundle exec'
 alias only_failures='bundle exec rspec spec/ --only-failures'
 alias spec='bundle exec rspec spec/'
 alias hk='heroku'
-alias vime="vim -u ${HOME}/.vim/essential.vim"
 alias d='docker'
 alias dc='docker-compose'
 alias dcr='docker-compose run --rm'
 alias dr='docker run --rm -it'
 alias vim='nvim'
-# alias multitail="multitail -cT ansi"
 alias stellare='stellar'
 
 # Expand aliases with sudo too
@@ -99,12 +84,12 @@ export HISTCONTROL='ignoreboth'
 export EDITOR='/usr/local/bin/nvim'
 export PAGER='less'
 export RUBY_CONFIGURE_OPTS='--disable-install-doc'
-export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export LESS='-R'
-# export DISABLE_SPRING='1'
 export PSQL_PAGER="pspg"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export GPG_TTY=$(tty)
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion

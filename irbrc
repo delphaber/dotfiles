@@ -3,13 +3,6 @@ require 'irb/completion' rescue nil
 IRB.conf[:SAVE_HISTORY] = 200
 IRB.conf[:HISTORY_FILE] = File.join(ENV["HOME"], ".irb-history")
 
-# begin
-#   require 'awesome_print'
-#   AwesomePrint.irb!
-# rescue LoadError
-#   puts 'No awesome_print :('
-# end
-
 def source_for(object, method_sym)
   if object.respond_to?(method_sym, true)
     method = object.method(method_sym)
@@ -21,4 +14,8 @@ def source_for(object, method_sym)
   location
 rescue
   nil
+end
+
+def connecting_to_shard(shard = :shard_one)
+  CurrentShard.connecting_to(role: :writing, shard: shard)
 end

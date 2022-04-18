@@ -18,10 +18,8 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
 # add binstubs folder
-export PATH="./bin:./exe:.bundle/bin:$PATH"
-
-# add node_modules
-export PATH="./node_modules/.bin:$PATH"
+# https://thoughtbot.com/blog/git-safe
+export PATH=".git/safe/../../bin:$PATH"
 
 # add YARN
 export PATH="$(yarn global bin):$PATH"
@@ -46,9 +44,6 @@ export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
 # export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 export RUBYOPT='-W:deprecated'
 export FARADAY_DEPRECATE='warn'
-
-# load iterm2 integration
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # load .bashrc
 source $HOME/.bashrc

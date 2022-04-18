@@ -3,9 +3,6 @@
 DOTFILES_DIR=".dotfiles"
 BACKUP_DIR="backup"
 DOTFILES=(
-ackrc
-agignore
-aprc
 bash_profile
 bashrc
 curlrc
@@ -16,10 +13,8 @@ gitignore_global
 iex.exs
 inputrc
 irbrc
-lftprc
-multitailrc
-pryrc
 psqlrc
+rgignore
 tmux.conf
 )
 

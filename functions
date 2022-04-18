@@ -90,23 +90,12 @@ function code_socks5_proxy {
   ssh -C -N -D 0.0.0.0:3128 code
 }
 
-function camar_socks5_proxy {
-  # Use firefox with SOCKS5
-  # To stop the proxy, `pkill ssh` or ctrl-c
-  ssh -C -N -D 0.0.0.0:3128 camar-redmine-production
-}
-
 function myip {
   dig +short myip.opendns.com @resolver1.opendns.com
 }
 
 function find_and_destroy_logs {
   find . -maxdepth 4 -type f -path '*/log/*' -name '*.log' -print0 | xargs -0 rm
-}
-
-function vscode_install_dependencies {
-  gem install solargraph ruby-debug-ide byebug rubocop
-  # gem install debase
 }
 
 function ansible_log {
