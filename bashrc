@@ -88,7 +88,7 @@ export HISTCONTROL='ignoreboth'
 ## Other exports
 export EDITOR='/usr/local/bin/nvim'
 export PAGER='less'
-export RUBY_CONFIGURE_OPTS='--disable-install-doc'
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # as suggested in ruby-build wiki
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export LESS='-R'
@@ -100,10 +100,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-source ~/.dotfiles/tmuxinator.bash
-source `brew --prefix`/etc/profile.d/z.sh
-source ~/.config/broot/launcher/bash/br
-source "$HOME/.cargo/env"
+# source ~/.dotfiles/tmuxinator.bash
+# source `brew --prefix`/etc/profile.d/z.sh
+# source ~/.config/broot/launcher/bash/br
+# source "$HOME/.cargo/env"
 
 ulimit -n 10240
 
@@ -112,5 +112,6 @@ ulimit -n 10240
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # heroku autocomplete setup
-# run `heroku autocomplete`
 HEROKU_AC_BASH_SETUP_PATH=/Users/faber/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
+
+eval "$(zoxide init bash)"
