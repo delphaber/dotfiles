@@ -72,6 +72,12 @@ function rubies {
   done | sort -n
 }
 
+function nodes {
+  for file in $(find . -type f -maxdepth 3 -name '.nvmrc'); do
+    echo $(cat $file) -- $file;
+  done | sort -n
+}
+
 function ports {
   lsof -i -Pn | grep -i "listen"
 }
@@ -146,4 +152,9 @@ function extract_sdi_invoice {
 
 function deep_node_modules_clean {
   find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;
+}
+
+function spring_kill {
+  pkill -9 'spring app'
+  pkill -9 'spring server'
 }

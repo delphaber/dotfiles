@@ -19,3 +19,7 @@ end
 def connecting_to_shard(shard = :shard_one)
   CurrentShard.connecting_to(role: :writing, shard: shard)
 end
+
+def jpg(obj)
+  puts JSON.pretty_generate(obj)
+end

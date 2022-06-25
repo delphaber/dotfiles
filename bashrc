@@ -45,10 +45,15 @@ alias npm_update='npm install npm@latest -g'
 alias only_failures='bundle exec rspec spec/ --only-failures'
 alias spec='bundle exec rspec spec/'
 alias hk='heroku'
-alias d='docker'
 alias dc='docker-compose'
+alias dcb='docker-compose build'
+alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
-alias dr='docker run --rm -it'
+alias dcrb='docker-compose run --rm bash'
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
+alias dcl='docker-compose logs'
+alias dcp='docker-compose ps'
 alias vim='nvim'
 alias stellare='stellar'
 
@@ -100,6 +105,7 @@ source `brew --prefix`/etc/profile.d/z.sh
 source ~/.config/broot/launcher/bash/br
 source "$HOME/.cargo/env"
 
+ulimit -n 10240
 
 [ -f ~/.dotfiles/functions ] && source ~/.dotfiles/functions
 
