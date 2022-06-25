@@ -101,10 +101,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # source ~/.dotfiles/tmuxinator.bash
-# source `brew --prefix`/etc/profile.d/z.sh
-# source ~/.config/broot/launcher/bash/br
-# source "$HOME/.cargo/env"
 
+# increase connections limit
 ulimit -n 10240
 
 [ -f ~/.dotfiles/functions ] && source ~/.dotfiles/functions

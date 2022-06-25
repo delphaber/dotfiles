@@ -36,12 +36,8 @@ export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# android
-export ANDROID_SDK_ROOT="/Users/$(whoami)/Library/Android/sdk"
-export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH
-
 # ruby-build rbenv
-# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # as suggested in ruby-build wiki
 export RUBYOPT='-W:deprecated'
 export FARADAY_DEPRECATE='warn'
 
