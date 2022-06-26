@@ -43,3 +43,4 @@ export FARADAY_DEPRECATE='warn'
 
 # load .bashrc
 source $HOME/.bashrc
+export PATH="/usr/local/opt/redis@6.2/bin:$PATH"
