@@ -56,6 +56,7 @@ alias dcl='docker-compose logs'
 alias dcp='docker-compose ps'
 alias vim='nvim'
 alias stellare='stellar'
+alias routes="bundle exec rails routes | fzf"
 
 # Expand aliases with sudo too
 alias sudo='sudo '
