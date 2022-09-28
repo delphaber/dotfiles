@@ -16,6 +16,7 @@ irbrc
 psqlrc
 rgignore
 tmux.conf
+rdbgrc.rb
 )
 
 function warn() {
