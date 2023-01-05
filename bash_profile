@@ -33,6 +33,9 @@ export PATH="/usr/local/opt/redis@5.0/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
 
+# mix escripts
+export PATH="$HOME/.mix/escripts:$PATH"
+
 # erlang
 export ERL_AFLAGS="-kernel shell_history enabled"
 

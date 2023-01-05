@@ -3,6 +3,14 @@ require 'irb/completion' rescue nil
 IRB.conf[:SAVE_HISTORY] = 200
 IRB.conf[:HISTORY_FILE] = File.join(ENV["HOME"], ".irb-history")
 
+
+def pbcopy(arg)
+  out = arg.is_a?(String) ? arg : arg.inspect
+  IO.popen('pbcopy', 'w') { |io| io.puts out }
+  puts out
+  true
+end
+
 def source_for(object, method_sym)
   if object.respond_to?(method_sym, true)
     method = object.method(method_sym)
