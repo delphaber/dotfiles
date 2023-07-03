@@ -24,14 +24,14 @@ export PATH=".git/safe/../../bin:$PATH"
 # add YARN
 export PATH="$(yarn global bin):$PATH"
 
+# add node modules bin
+export PATH=".git/safe/../../node_modules/.bin:$PATH"
+
 # add kegonly paths
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
-export PATH="/usr/local/opt/redis@5.0/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+export PATH="/usr/local/opt/redis@6.2/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="/usr/local/opt/elasticsearch@5.6/bin:$PATH"
 
 # mix escripts
 export PATH="$HOME/.mix/escripts:$PATH"
@@ -46,4 +46,3 @@ export FARADAY_DEPRECATE='warn'
 
 # load .bashrc
 source $HOME/.bashrc
-export PATH="/usr/local/opt/redis@6.2/bin:$PATH"

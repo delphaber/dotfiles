@@ -54,6 +54,7 @@ alias dcu='docker-compose up'
 alias dcd='docker-compose down'
 alias dcl='docker-compose logs'
 alias dcp='docker-compose ps'
+alias dcs='docker-compose stop'
 alias vim='nvim'
 alias stellare='stellar'
 alias routes="bundle exec rails routes | fzf"
@@ -89,13 +90,15 @@ export HISTCONTROL='ignoreboth'
 ## Other exports
 export EDITOR='/usr/local/bin/nvim'
 export PAGER='less'
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # as suggested in ruby-build wiki
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1) --with-jemalloc"
 export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export LESS='-R'
-export PSQL_PAGER="pspg"
+# export PSQL_PAGER="pspg"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME="TwoDark"
 export GPG_TTY=$(tty)
+export HOMEBREW_AUTOREMOVE=1
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion

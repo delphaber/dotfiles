@@ -87,7 +87,7 @@ function hosts_in_lan {
 }
 
 function postgres_delete_pid {
-  rm /usr/local/var/postgresql@11/postmaster.pid
+  rm /usr/local/var/postgresql@15/postmaster.pid
 }
 
 function code_socks5_proxy {
@@ -157,4 +157,8 @@ function deep_node_modules_clean {
 function spring_kill {
   pkill -9 'spring app'
   pkill -9 'spring server'
+}
+
+function bundle_safe_update {
+  bundle update --conservative --group test development
 }

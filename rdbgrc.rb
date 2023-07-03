@@ -1,5 +1,5 @@
-DEBUGGER__::CONFIG[:skip_path] = Gem.path.join(":")
-DEBUGGER__::CONFIG[:use_short_path] = true
+# DEBUGGER__::CONFIG[:skip_path] = Gem.path.join(":")
+# DEBUGGER__::CONFIG[:use_short_path] = true
 
 def pbcopy(arg)
   out = arg.is_a?(String) ? arg : arg.inspect
