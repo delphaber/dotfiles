@@ -44,5 +44,8 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # a
 export RUBYOPT='-W:deprecated'
 export FARADAY_DEPRECATE='warn'
 
+# fix for mac os problems
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # load .bashrc
 source $HOME/.bashrc
