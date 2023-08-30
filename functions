@@ -47,6 +47,16 @@ function last_migration {
   code $(echo_last_migration $*)
 }
 
+function echo_last_shard_migration {
+  migrate_path='db/environment_shards_migrate/'
+  nth_migration=$((${1:-0}+1))
+  echo "${migrate_path}$(ls -1t $migrate_path | head -$nth_migration | tail -1)"
+}
+
+function last_shard_migration {
+  code $(echo_last_shard_migration $*)
+}
+
 function view_coverage {
   report='coverage/index.html'
   if [ -f "$report" ]; then
