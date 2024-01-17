@@ -29,7 +29,7 @@ export PATH=".git/safe/../../node_modules/.bin:$PATH"
 
 # add kegonly paths
 export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/postgresql@15/libexec/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
 export PATH="/usr/local/opt/redis@6.2/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
