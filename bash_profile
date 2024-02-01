@@ -47,5 +47,8 @@ export FARADAY_DEPRECATE='warn'
 # fix for mac os problems
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# docker
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+
 # load .bashrc
 source $HOME/.bashrc
