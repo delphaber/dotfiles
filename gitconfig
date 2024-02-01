@@ -109,3 +109,6 @@
 
 [bulkworkspaces]
   dato = /Users/faber/Repos/dato/main
+
+[init]
+  defaultBranch = main
